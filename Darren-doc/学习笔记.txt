@@ -2,6 +2,8 @@
 
 截取字符串 substr('string',0,1)
 
+去除字符串空格 trim
+
 判断字符串位置存在与否
 strstr('string','key') 返回关键字以后的字符串
 
