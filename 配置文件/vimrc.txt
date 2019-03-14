@@ -1,0 +1,12 @@
+set modelines=0
+set nocompatible
+set backspace=2
+let skip_defaults_vim=1
+
+syntax on
+set nonu
+set cindent
+set background=dark
+set ruler
+winpos 15 15
+set cursorline

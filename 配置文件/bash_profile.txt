@@ -1,8 +1,7 @@
 source ~/.profile
 
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#捞月狗
+alias baolei='/Users/darren/projects/neutron/jumpto envgateway'
 
 #自定义快捷命令
 alias ppsql='psql -U postgres'
@@ -17,10 +16,13 @@ alias cc='clear'
 alias ls='ls -G'
 alias vimbash_pro='vim ~/.bash_profile'
 alias ppc='php cli.php'
-alias cdnginx= 'cd /usr/local/nginx/conf'
 alias varlog='cd /usr/local/var/log'
 alias mamplog='/Applications/MAMP/logs'
 
+#配置显示当前目录
+PROMPT='${ret_status} %{$fg[cyan]%}$PWD%{$reset_color%} $(git_prompt_info)'
+#快速brew源
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 #ssh快速链接
 alias sshtengxun='ssh root@58.87.71.104'
@@ -112,20 +114,8 @@ export otceasy_db_name='otceasy_development'
 export otceasy_notify_host='http://otceasy.com'
 
 
-#EOS项目开发
-#alias cleos='docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555'
-
-alias cleos='docker-compose -f /Users/darren/projects/eos/Docker/docker-compose.yml exec keosd /opt/eosio/bin/cleos -u http://nodeosd:8889 --wallet-url http://localhost:8900'
-
-
-alias keosd='docker exec -i keosd /opt/eosio/bin/cleos  --wallet-url http://127.0.0.1:8900  -u http://mainnet.eoscalgary.io  '
-alias noeos='docker exec -i nodeos /opt/eosio/bin/cleos -u http://127.0.0.1:8889 --wallet-url http://127.0.0.1:8889' 
-
-
-
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
-
 
