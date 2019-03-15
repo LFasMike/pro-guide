@@ -1,4 +1,4 @@
- 
+   
 
 3.11
 php内部开启动 webserver
@@ -23,7 +23,6 @@ $sort = trim($sort);
 
 2：疑问： 为什么有时候对象方法使用数组作为参数传递就会不成功，（最后转为json才解决传递参数问题）
 
-3：
 
 
 1.10
@@ -215,8 +214,7 @@ grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 patter
 12.1 今天重新安装nginx 开始报错openssl找不到
 于是发现是路径没有写对，在configuer时候 后面加了 ./configure  --with-openssl=/usr/local/opt/openssl/bin  就解决了路径问题
 再次make后，又报错,  方案 : make clean  解决
-后面直接成功
-
+后面直接成功 以下是成功后的显示结果：
 
 Configuration summary
   + using system PCRE library
