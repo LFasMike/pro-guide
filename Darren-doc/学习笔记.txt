@@ -1,9 +1,7 @@
     学习笔记
 
 截取字符串 substr('string',0,1);
-
-每天
-
+ 
 
 判断字符串位置存在与否
 strstr('string','key') 返回关键字以后的字符串
@@ -808,17 +806,13 @@ appledeiMac-2:nginx apple$ which php-fpm
 Git global setup
 git config --global user.name "张振宇"
 git config --global user.email "zhangzhenyu@iyich.com"
-
-Create a new repository
+ 
 git clone https://code.365yf.cc/zhangzhenyu/test.git
-cd test
-touch README.md
+ 
 git add README.md
 git commit -m "add README"
 git push -u origin master
-
-Existing folder
-cd existing_folder
+ 
 git init
 添加远程仓库地址
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
@@ -827,8 +821,7 @@ git commit -m "Initial commit"
 git push -u origin master  （加-u  项指定一个默认主机，这样后面就可以直接用push）
 git push <远程主机名> <本地分支名>:<远程分支名>
 
-Existing Git repository
-cd existing_repo
+ 
 git remote rename origin old-origin
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
 git push -u origin --all
@@ -857,10 +850,6 @@ git reset --hard origin/master
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
 
-安装配置包时候报出未安装信息：
-Package endroid/qrcode is abandoned, you should avoid using it. Use endroid/qr-code instead.
-Package phpoffice/phpexcel is abandoned, you should avoid using it. Use phpoffice/phpspreadsheet instead.
-记录一下~
 
 查看phalcon版本信息
 appledeiMac-2:phalcon-devtools apple$ phalcon -v
@@ -1039,10 +1028,9 @@ git log -p -2
 git log --pretty=oneline
 
 查看分支情况
-git branch -va
+git branch -v
 切换到分支name
 git checkout -b name
-
 
 则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push
  git push -u origin master
