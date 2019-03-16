@@ -847,6 +847,9 @@ git fetch 《remote》 远程拉取代码
 重置当前分支
 git reset --hard origin/master
 
+当前分支回退版本(回退3个版本 就用HEAD~3 )
+git reset --hard HEAD^
+
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
 
