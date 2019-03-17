@@ -1344,7 +1344,6 @@ proxy_pass http://fetch;
 )
 
  
- 
 
 openresty最后成功编译安装的配置信息
 ./configure --with-cc-opt="-I/usr/local/opt/openssl/include/ -I/usr/local/opt/pcre/include/" --with-ld-opt="-L/usr/local/opt/openssl/lib/ -L/usr/local/opt/pcre/lib/" --with-http_drizzle_module --with-http_iconv_module --with-http_postgres_module
@@ -1352,8 +1351,6 @@ openresty最后成功编译安装的配置信息
 
 
 7月12日
-
-
 
  nginx日志
  /usr/local/Cellar/nginx/1.15.0/logs

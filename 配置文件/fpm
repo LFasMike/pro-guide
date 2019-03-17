@@ -1,0 +1,37 @@
+#!/bin/bash
+USER=`whoami`
+
+PHP_CGI=/usr/local/sbin/php-fpm
+PHP_CGI_NAME=`basename $PHP_CGI`
+RETVAL=0
+
+start() {
+      echo -n "Starting PHP FPM: "
+      $PHP_CGI
+      RETVAL=$?
+      echo "$PHP_CGI_NAME."
+}
+stop() {
+      echo -n "Stopping PHP FPM: "
+      killall -QUIT  -u $USER php-fpm
+      RETVAL=$?
+      echo "$PHP_CGI_NAME."
+}
+
+case "$1" in
+    start)
+      start
+  ;;
+    stop)
+      stop
+  ;;
+    restart)
+      stop
+      start
+  ;;
+    *)
+      echo "Usage: fpm {start|stop|restart}"
+      exit 1
+  ;;
+esac
+exit $RETVA

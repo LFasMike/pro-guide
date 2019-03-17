@@ -15,7 +15,10 @@ cd ..
 wget http://nginx.org/download/nginx-1.15.1.tar.gz
 tar -zxvf nginx-1.15.1.tar.gz
 cd nginx-1.15.1
-./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-http_sub_module --with-stream
+
+#首先清楚openssl在那个目录，看下/usr/local下有没有 在执行这个编译
+
+./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-http_sub_module --with-stream --with-openssl=/usr/local/openssl/
 # 报错信息如下：
 
 # /bin/sh: line 2: ./config: No such file or directory
@@ -68,7 +71,7 @@ make
 make install
 cd ..
 
-https://github.com/phpredis/phpredis/archive/4.0.2.tar.gz  -O phpredis-4.0.2.tar.gz
+wget https://github.com/phpredis/phpredis/archive/4.0.2.tar.gz  -O phpredis-4.0.2.tar.gz
 tar -zxvf phpredis-4.0.2.tar.gz
 cd phpredis-4.0.2
 phpize
