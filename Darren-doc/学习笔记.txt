@@ -531,8 +531,9 @@ http://btc_cny.engine.com/api/market?pair=BTC_CNY
 
 远程拷贝文件和目录(将此文件或目录内的文件，移动到对面文件或目录内部 **需要自己定义文件名称或者目录名**)
 
-$scp -r server-1.properties root@47.95.7.124:/usr/local
-sudo scp -r -P 55429 ./log root@139.196.110.54:/usr/local/testlog
+scp -r land@118.178.128.61://var/www/env.zhibo.test/app/app.git/modules/app/controllers/GoodController.php ./
+
+scp -r server-1.properties root@47.95.7.124:/usr/local
 
 sudo scp -r -P 55429 zookeeper_kafka_start.sh root@192.168.81.168:/usr/local/system/src/kafka_2.11-1.1.0
  
@@ -852,7 +853,8 @@ git reset --hard HEAD^
 
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
-
+强推版本
+git push --force
 
 查看phalcon版本信息
 appledeiMac-2:phalcon-devtools apple$ phalcon -v
