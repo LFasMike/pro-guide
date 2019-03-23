@@ -8,7 +8,7 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Mac安装依赖
-brew install readline freetype libpng jpeg mhash openssl re2c ImageMagick bison autoconf ffmpeg ImageMagick pcre zlib
+brew install libiconv readline freetype libpng jpeg mhash openssl re2c ImageMagick bison autoconf ffmpeg ImageMagick pcre zlib curl libedit
 
 
 #mac 编译参数
@@ -51,11 +51,14 @@ Undefined symbols for architecture x86_64:
   "_TLSv1_2_server_method", referenced from:
       _php_openssl_setup_crypto in xp_ssl.o
 
+
 vi Makefile
 查找到以下字符串 EXTRA_LIBS开始
 EXTRA_LIBS = -lresolv -lltdl -liconv-lm -lxml2 -lcurl -lssl -lcrypto
-将-lssl -lcrypto删除，再后面再追加
+将-lssl 删除，再后面再追加
 /usr/local/opt/openssl/lib/libssl.dylib /usr/local/opt/openssl/lib/libcrypto.dylib
+ 
+
 
 #以下错误
 Undefined symbols for architecture x86_64:
@@ -72,6 +75,9 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 make: *** [sapi/cli/php] Error 1
 处理方式：
 这是由于查找不到libiconv导致的错误。
+brew reinstall libiconv
 vi Makefile
-查找EXTRA_LIBS,删除里面所有的-liconv，在最后添加 /usr/local/Cellar/libiconv/1.15/lib/libiconv.dylib，即libiconv的地址。
+查找 EXTRA_LIBS,删除里面所有的-liconv，在最后添加 /usr/local/Cellar/libiconv/1.15/lib/libiconv.dylib，即libiconv的地址。
 libiconv文件可以通过find ~ -iname libiconv找到。
+
+

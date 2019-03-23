@@ -8,8 +8,10 @@ tar -zxvf php-7.2.0.tar.gz
 cd php-7.2.0.tar.gz
 
 #mac
-#./configure --with-pgsql --with-pdo-pgsql --with-pdo-mysql --with-openssl=/usr/local/opt/openssl/ --enable-zip --enable-mbstring --enable-fpm --enable-opcache  --with-curl --with-libedit=/usr/local/opt/libedit  --enable-pcntl   --enable-sysvmsg  --with-zlib-dir=/usr/local/opt/zlib   --with-gd --with-jpeg-dir=/usr/local/opt/jpeg/  --with-png-dir=/usr/local/opt/libpng/ --with-freetype-dir=/usr/local/opt/freetype --with-iconv=/usr/local/opt/libiconv/  --enable-bcmath --with-gmp
---with-curl
+#./configure --with-pgsql --with-pdo-pgsql --with-pdo-mysql --with-openssl=/usr/local/opt/openssl/ --enable-zip --enable-mbstring --enable-fpm --enable-opcache  --with-curl --with-libedit=/usr/local/opt/libedit  --enable-pcntl   --enable-sysvmsg  --with-zlib-dir=/usr/local/opt/zlib   --with-gd --with-jpeg-dir=/usr/local/opt/jpeg/  --with-png-dir=/usr/local/opt/libpng/ --with-freetype-dir=/usr/local/opt/freetype --with-iconv=/usr/local/opt/libiconv/  --enable-bcmath --with-gmp --with-curl
+
+
+
 
 编译如果报错信息:
 checking for xml2-config path... /usr/bin/xml2-config
@@ -23,6 +25,12 @@ configure: error: build test failed.  Please check the config.log for details.
 报错:
 configure: error: Unable to locate gmp.h
 brew install gmp
+
+
+ 3:报错出现 curl找不到时候 error: Please reinstall the libcurl distribution
+
+ 检查brew info curl  然后重新安装  最后安装目录应该在/usr/local/opt/curl
+
 
 #linux
 ./configure --with-pdo-mysql --with-pgsql --with-pdo-pgsql --with-openssl --enable-zip --enable-mbstring --enable-fpm --enable-opcache  --with-curl --with-readline --enable-pcntl   --enable-sysvmsg  --with-zlib --with-gd --with-jpeg-dir  --with-png-dir --with-freetype-dir   --enable-bcmath --with-gmp --with-openssl
