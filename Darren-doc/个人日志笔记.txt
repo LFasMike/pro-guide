@@ -45,6 +45,9 @@ $sort = trim($sort);
 数组去空、去重处理
 array_unique(array_filter())
 
+#合并数组 去空去重，
+  implode(',', array_unique(array_filter(array_merge($user_ids, $add_user_ids))));
+
 
 1.9开通https顺序：
 
@@ -183,23 +186,10 @@ set  +H
  file_exists($file);
  mkdir($dir,0777,true);
           
-
-
-12.12 yii框架
-
-//        $results = yii::$app->db->createcommand("select oid,nickname,password,username,headpic from user where oid=" . $user_id)->queryone();
-//
-//        $result_self = yii::$app->db->createcommand("select oid,nickname,password,username,headpic from user where oid=" . $self_id)->queryone();
-
-
-
-12.6
-     #合并数组 去空去重，
-  implode(',', array_unique(array_filter(array_merge($user_ids, $add_user_ids))));
-
+ 
 
 12.3
-linux中读写 执行 chmod 命令
+linux中读写 权限 执行 chmod 命令
 -rw------- (600)      只有拥有者有读写权限。
 -rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。
 -rwx------ (700)     只有拥有者有读、写、执行权限。

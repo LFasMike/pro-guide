@@ -337,20 +337,12 @@ php cli.php generate add_connect_weixin_to_product_channels
 增加完文件后，生成数据即可：
 PHP cli.php migrate
 
-给ssdb存数据
-//            $coin_trade_id = '{"data":"{\"active_num\":\"14\",\"register_num\":\"1\",\"new_user_active_num\":null,\"new_user_active_z\":0,\"old_user_active_num\":\"32\",\"old_user_active_z\":10,\"register_rate\":\"7.14%\",\"old_user_active_avg_num\":3.2}","stat_time":"'. $time .'","product_channel_id":1,"platform":"","partner_id":""}';
-//            $ssdb->set($key, $coin_trade_id);
-
-
-8.9
-还用api时必须使用的参数
-?code=test&debug=1&client=web
  
-
+ 
 8.8
  I  P     : 47.75.203.125
  端口     : 2333
- 密码     : buzhidao123
+ 密码     : 
  加密     : aes-256-cfb
  协议     : auth_sha1_v4_compatible
  混淆     : plain
