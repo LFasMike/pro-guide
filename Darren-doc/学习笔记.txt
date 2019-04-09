@@ -795,27 +795,22 @@ appledeiMac-2:nginx apple$ which php-fpm
 /usr/local/bin/php-fpm
 
 
-使用到git熟悉命令： 
 
-Git global setup
-git config --global user.name "张振宇"
-git config --global user.email "zhangzhenyu@iyich.com"
- 
-git clone https://code.365yf.cc/zhangzhenyu/test.git
- 
-git add README.md
-git commit -m "add README"
-git push -u origin master
- 
 git init
 添加远程仓库地址
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
 git add .
 git commit -m "Initial commit"
+git checkout -f
+git reset --soft HEAD^   将在未push提交的撤销  一次
 git push -u origin master  （加-u  项指定一个默认主机，这样后面就可以直接用push）
 git push <远程主机名> <本地分支名>:<远程分支名>
 
- 
+使用到git熟悉命令： 
+Git global setup
+git config --global user.name "张振宇"
+git config --global user.email "zhangzhenyu@iyich.com"
+
 git remote rename origin old-origin
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
 git push -u origin --all
