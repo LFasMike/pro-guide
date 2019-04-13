@@ -1,3 +1,7 @@
+Varnish 是一款高性能且开源的反向代理服务器和 HTTP 加速器
+
+文档：https://www.ibm.com/developerworks/cn/opensource/os-cn-varnish-intro/index.html
+
 安装依赖库
 yum install -y libedit-devel  pcre-devel  ncurses-devel python-docutils make autoconf automake jemalloc-devel ibedit-devel ibtool pkgconfig python-sphinx
 
