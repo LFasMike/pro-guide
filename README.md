@@ -7,7 +7,14 @@
 
 3. 常用配置文档，便于环境搭建（openresty、nginx、postgres、php、redis、ssdb、kafaka、zookeeper集群）
 4. 梳理常用项目软件，部署流程，以及方案
-
+5. 其他方面发展规划：
+   * 多进程、线程、协程
+   * golang开发
+   * 消息集群部署 kafka+zookeeper
+   * openresty 多模块配置
+   * ruby开发
+   * linux配置及运维
+   * python开发
 
     #### 总体来说涉及范围较多，日积月累，得以记录。
 
