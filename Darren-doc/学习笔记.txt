@@ -1,12 +1,14 @@
     学习笔记
 
+
+
 截取字符串 substr('string',0,1);
  
 
 判断字符串位置存在与否
 strstr('string','key') 返回关键字以后的字符串
 
-if(strpos($img,'1')!==false)  返回真假
+if(strpos($img,'1')!==false)  返回真(含有) 假 （不含有）
  
 利用命令grep在文件中搜索字符串
 grep -rni broker.address.family /

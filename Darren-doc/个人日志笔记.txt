@@ -1,4 +1,17 @@
 
+4.11
+shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
+
+合并数组方式 
+1：array_merge();  合并后不保留健值，
+2 $arr + $arr1  保留键值
+
+4.10
+php命令启动：php -S 127.0.0.1:9999 -t ./public
+
+php合并变量成为数组
+
+
 3.28
 /**
  * 二维数组根据某个字段排序
