@@ -1,15 +1,33 @@
 source ~/.profile
 
 #捞月狗
-alias baolei='/Users/darren/projects/neutron/jumpto envgateway'
+alias baolei='/Users/darren/projects/baolei/ '
+alias test_lyg='ssh land@118.178.128.61'
+alias ceshi_lyg='ssh land@118.178.128.61'
+alias master_lyg='./jumpto nscaling-12-17-5117'
+alias lygapp='/Users/darren/projects/lyg_app'
+alias tasklyg='ssh land@172.16.163.247'
+alias log_lyg='./jumpto vpcplayground_01'
+alias order_php='./jumpto  vpcplayground_10'
+
+alias redis_ceshi='redis-cli -h r-bp1c567a657a6e14.redis.rds.aliyuncs.com -p 6379 -a LOYOGOU2016redis'
+alias redis_product='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.com -p 6379 -a LOYOGOU2016redis'
+
+
+#配置本及运行环境别名
+#alias php='/usr/bin/php'
+#alias pear=''
+#alias php='/Applications/MAMP/bin/php/php7. "/Library/Application Support/appsolute/MAMP PRO/conf/php7.1.26.ini"'
 
 #自定义快捷命令
+alias ppp_projects='cd ~/projects'
+alias duhd='du -h -d 1'
 alias ppsql='psql -U postgres'
 alias rrm='rm -rf '
 alias sss_bash_profile='source ~/.bash_profile'
 alias pps='ps -ef |grep '
 alias tf='tail -f '
-alias laa='ls -all'
+alias lll='ls -lh'
 alias ll='ls -all'
 alias kk='ls -all'
 alias cc='clear'
@@ -20,7 +38,7 @@ alias varlog='cd /usr/local/var/log'
 alias mamplog='/Applications/MAMP/logs'
 
 #配置显示当前目录
-PROMPT='${ret_status} %{$fg[cyan]%}$PWD%{$reset_color%} $(git_prompt_info)'
+PROMPT='%{$fg[cyan]%}$PWD%{$reset_color%} $(git_prompt_info)'
 #快速brew源
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
@@ -40,17 +58,19 @@ alias ppt='php think '
 alias hupu='/Users/darren/projects/yxm/hupu'
 alias hope='/Users/darren/projects/hope'
 
-export PATH=$PATH:/usr/local/sbin
 export PGDATA=/Users/darren/postgresql/data
 export PATH=/usr/local/pgsql/bin:$PATH
 export PTOOLSPATH=/Users/darren/src/phalcon-devtools/
 export PATH=/usr/local/openresty/nginx/sbin:$PATH
 export PATH=/Users/darren/src/kafka2.11-1.1.1/bin:$PATH
 export PATH=$PATH:/usr/local/bin
+export PATH=/usr/local/sbin:$PATH #目的是将新的fpm放到最前面
 export PATH=$PATH:/Users/darren/src/apache-maven-3.5.4/bin  #maven的路径
-export PATH=$PATH:~/src/apache-tomcat-8.5.34/bin 
+export PATH=$PATH:~/src/apache-tomcat-8.5.34/bin
 export PATH=$PATH:/usr/local/lib/node_modules/eslint/bin
-export PATH=/Users/darren/go/src/github.com/hyperledger/fabric/release/darwin-amd64/bin:$PATH
+export PATH=/usr/bin/php:$PATH
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/mysql/bin
 export PATH=$PATH:/Users/darren/src/icomet-master
 export PATH=$PATH:/usr/local/nginx/sbin
@@ -78,44 +98,31 @@ export db_password='aaaa'
 export db_name='otc_php'
 
 
-export otc_notify_host='http://otc_php.com'
-export otc_kafka_topic='otc-dev'
-export otc_kafka_group='zzynew2'
-export otc_trade_host='engine.com'
-export otc_kafka_server_endpoints='localhost:9092,localhost:9093,localhost:9094'
-
 export otc_aws_ses_smtp_username='AKIAI6NLQHZC3NPRZTGQ'
 export otc_aws_ses_smtp_password='Au+Hc6J+Jd0zNsaOANf3Ht+i+DGzgfDL2N2O5RoZbY/x'
-
-
-#市商使用环境变量
-export coin_otc_api_key='yk1MX1ST5s13416N1moun6Xn1514J2'
-export coin_otc_secret_key='r15OlDyJYC3GZ417sQ6istjQP148g2'
-export coin_otc_account_host='otc_php.com'
-export coin_aws_ses_smtp_password='Au+Hc6J+Jd0zNsaOANf3Ht+i+DGzgfDL2N2O5RoZbY/x'
-export coin_aws_ses_smtp_region='email-smtp.us-east-1.amazonaws.com'
-export coin_aws_ses_smtp_username='AKIAI6NLQHZC3NPRZTGQ'
-export coin_smtp_send_from_name='Wangcai.io'
-export coin_smtp_send_from_address='test_noreply@wangcai.io'
-
-export connect_db_host='127.0.0.1'
-export connect_db_port=5432
-export connect_db_username='postgres'
-export connect_db_password='aaaa'
-export connect_db_name='coin_development'
-
-#钱包受用环境变量
-export otceasy_db_host='127.0.0.1'
-export otceasy_db_port=5432
-export otceasy_db_username='postgres'
-export otceasy_db_password='aaaa'
-export otceasy_db_name='otceasy_development'
-
-export otceasy_notify_host='http://otceasy.com'
-
 
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
 
+#终端代理配置
+export http_proxy='http://localhost:8118'
+export https_proxy='http://localhost:8118'
+
+alias proxyopen='sudo /usr/local/sbin/privoxy /usr/local/etc/privoxy/config'
+alias proxys='export all_proxy=socks5://127.0.0.1:1086'
+alias unproxy='unset all_proxy'
+
+function proxy_off(){
+    unset http_proxy
+    unset https_proxy
+    echo -e "已关闭代理"
+}
+
+function proxy_on() {
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export http_proxy="http://127.0.0.1:8118"
+    export https_proxy=$http_proxy
+    echo -e "已开启代理"
+}
