@@ -1,14 +1,54 @@
 
+4.17
+laravel查询多个字段 参数
+$data = PlayGodAcceptSetting::query()
+  ->select('*', 'pei_wan_uniprice_id as price_id')
+  ->first();
+
+
+linux在shell中获取文件目录全地址
+root_dir=$(cd "$(dirname "$0")";pwd)
+
+function curlGet($url, $user_agent = "")
+{
+    //初始化
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    //执行并获取HTML文档内容
+    $output = curl_exec($ch);
+    curl_close($ch);
+    return $output;
+}
+
+function curlPost($url, $post)
+{
+    //初始化
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url); // 要访问的地址
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // 获取的信息以文件流的形式返回
+    curl_setopt($ch, CURLOPT_HEADER, 0); // 显示返回的Header区域内容
+    curl_setopt($ch, CURLOPT_POST, 1); // 发送一个常规的Post请求
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post); // Post提交的数据包
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30); // 设置超时限制防止死循环
+    //执行并获取HTML文档内容
+    $output = curl_exec($ch);
+    curl_close($ch);
+    return $output;
+}
+
 4.11
 shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
 
-合并数组方式 
+php合并数组方式 
 1：array_merge();  合并后不保留健值，
-2 $arr + $arr1  保留键值
+2 $arr + $arr1  保留键值 若健值重复则优先取前面的
 
 4.10
 php命令启动：php -S 127.0.0.1:9999 -t ./public
-
+php -S 127.0.0.1:9998 -t ./public >> /usr/local/var/log/php7.log 2>&1 &
 php合并变量成为数组
 
 
