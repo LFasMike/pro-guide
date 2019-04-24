@@ -1,7 +1,11 @@
 
+# git 基本操作
+
 git init
 添加远程仓库地址
+
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
+
 git add .
 git commit -m "Initial commit"
 git checkout -f
@@ -34,8 +38,6 @@ git push origin --delete zzy-test
 
 git remote -v 查看远程版本库信息
 
-git fetch 《remote》 远程拉取代码
-
 重置当前分支
 git reset --hard origin/master
 
@@ -44,8 +46,7 @@ git reset --hard HEAD^
 
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
-强推版本
-git push --force
+
 
 
 git 
