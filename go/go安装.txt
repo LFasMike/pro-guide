@@ -17,7 +17,7 @@ GOROOT=/usr/local/go
 GOPATH=/usr/local/system/go
 
 安装依赖x
-git clone github.com/golang/tools
+git clone http://github.com/golang/tools
 mkdir -p  $GOPATH/src/golang.org/x/
 cp -r tools $GOPATH/src/golang.org/x/
 安装
