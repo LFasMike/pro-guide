@@ -1,4 +1,18 @@
 
+5.8
+批量删除redis keys
+redis-cli -h 127....  -a password keys "GGV1:*" | xargs redis-cli -h 127.... -a password del
+
+5.1 artisan  queue使用
+
+php artisan queue:work --queue=testQueue  指定消费队列
+php artisan queue:work --daemon 守护进程节省cup
+
+
+4.30
+redis监控实时日志
+127.0.0.1:6379>monitor
+
 4.24
 连接redis 
 redis-cli -h 127... -p 6379 -a password
