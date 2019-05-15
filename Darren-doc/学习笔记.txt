@@ -1,6 +1,14 @@
     学习笔记
 
 
+linux 查找目录或文件
+查找目录：find /（查找范围） -name '查找关键字' -type d
+查找文件：find /（查找范围） -name 查找关键字 -print
+ 
+ find ~ -iname  "*说明*"
+
+查找忽略过滤不被允许 关键字  
+find / -name '查找关键字' |& grep -v  "Permission" | grep -v "not permitted" |grep -v "directory"
 
 截取字符串 substr('string',0,1);
  
@@ -38,11 +46,6 @@ diff -r dir1 dir2
 复制目录时，使用-r选项即可递归拷贝，如下：
 cp -r dir1 dir2
 
-linux 查找目录或文件
-查找目录：find /（查找范围） -name '查找关键字' -type d
-查找文件：find /（查找范围） -name 查找关键字 -print
- 
- find ~ -iname  "*说明*"
 
 启动撮合引擎  几大步骤
 先启动ssdb和redis （打开撮合引擎目录）
