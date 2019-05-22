@@ -13,7 +13,6 @@ alias order_php_ssh_lyg='./jumpto  vpcplayground_10'
 #redis地址
 alias redis_ceshi='redis-cli -h r-bp1c567a657a6e14.redis.rds.aliyuncs.com -p 6379 -a 123'
 alias redis_product='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.com -p 6379 -a 123123'
-
  
 #自定义快捷命令
 alias ppp_projects='cd ~/projects'
@@ -74,7 +73,7 @@ export PATH=$PATH:/usr/local/ssdb
 export PATH=$PATH:/Users/darren/src/redis-5/src
 export DISPLAY=:0
 
- 
+ #循环遍历当前目录中脚本文件
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
   [ -r "$file" ] && source "$file"
 done
