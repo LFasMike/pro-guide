@@ -35,3 +35,7 @@ mac环境变量配置文件为 ~/.bash_profile
 linux 环境变量配置文件为 /etc/profile
 使用source命令立即生效, 比如
 source /etc/profile
+
+
+本地php、nginx、 redis 、配置文件 公用的配置都放到
+/usr/local/etc 目录下
