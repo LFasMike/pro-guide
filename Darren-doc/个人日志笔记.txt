@@ -1,4 +1,9 @@
 
+5.22
+//忽略本地依赖
+composer --ignore-platform-reqs require laoyuegou/smartnormalizer
+
+
 5.14
 查看当前本地秘钥
  ssh-add -h

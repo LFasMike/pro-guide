@@ -1,12 +1,36 @@
 
 # linux 常用总结
- 
- mv -f dir1 dir2
+ //目录空间占用
+linux: du -h --max-depth=1
+macos: du -h -d 1
 
+重定向目录文件，移动
+mv -f dir1 dir2
 
 利用命令grep在文件中搜索字符串
 grep -rni broker.address.family /
  ps -ef | grep nginx
+
+vim 多标签和多窗口
+:tabs  显示已打开标签页的列表，并用“>”标识出当前页面，用“+”标识出已更改的页面。
+关闭标签页
+:tabc  关闭当前标签页。
+:tabo  关闭所有的标签页。
+切换标签
+:tabn  移动到下一个标签页。 gt
+:tabp  移动到上一个标签页。 gT
+tabf * .txt  允许你在当前目录搜索文件，tabf 
+:tabnew file  等价  :tabe file   在新标签页中打开或新建文件file 
+
+ansible使用
+
+/etc/ansible/hosts:
+[test]  # test分组
+192.168.0.1  ansible_user=xxx  # 远程服务器地址，指定主机用户名
+
+测试：
+ansible all -m ping -u xxx
+
 
 
 下载包命令
@@ -18,7 +42,7 @@ tar -xzvf openresty-1.13.6.2.tar.gz
 ps ax| grep -i 'get_orders_detail'  | grep -v grep | awk '{print $1}'
 查看进程数量
 ps aux |grep kafka |grep start | wc -l   
-全部杀掉进程
+全部杀掉kafka进程
 ps aux |grep kafka |grep start |grep -v grep |awk '{print $2}' |xargs kill
 查看进程树
 pstree -p 2500
