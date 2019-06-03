@@ -42,6 +42,9 @@ tar -xzvf openresty-1.13.6.2.tar.gz
 ps ax| grep -i 'get_orders_detail'  | grep -v grep | awk '{print $1}'
 查看进程数量
 ps aux |grep kafka |grep start | wc -l   
+
+查看cpu数量：
+cat /proc/cpuinfo| grep "processor"| wc -l
 全部杀掉kafka进程
 ps aux |grep kafka |grep start |grep -v grep |awk '{print $2}' |xargs kill
 查看进程树
@@ -109,6 +112,42 @@ linux定时任务
 #every 12:00
 0 12 * * * /schedule_every_noon.sh >> /log/schedule_every_noon.log 2>&1
 
+
+
+12.27
+shell rm命令：
+rm -r :删除目录
+rm -f : 删除文件
+-i ：执行前做个提醒
+
+
+
+12.3
+linux中读写 权限 执行 chmod 命令
+-rw------- (600)      只有拥有者有读写权限。
+-rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。
+-rwx------ (700)     只有拥有者有读、写、执行权限。
+-rwxr-xr-x (755)    拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
+-rwx--x--x (711)    拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
+-rw-rw-rw- (666)   所有用户都有文件读、写权限。
+-rwxrwxrwx (777)  所有用户都有读、写、执行权限。
+
+
+2:检索所有文件中匹配的字符串(find)
+我一般使用: grep -nri key_word ./*
+grep -i pattern files ：不区分大小写地搜索。默认情况区分大小写， 
+
+grep -l pattern files ：只列出匹配的文件名， 
+
+grep -L pattern files ：列出不匹配的文件名， 
+
+grep -w pattern files ：只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’）， 
+
+grep -C number pattern files ：匹配的上下文分别显示[number]行， 
+
+grep pattern1 | pattern2 files ：显示匹配 pattern1 或 pattern2 的行， 
+
+grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。 
 
 
 
