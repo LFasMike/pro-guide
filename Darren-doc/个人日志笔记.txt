@@ -1,4 +1,9 @@
 
+6.10
+php字符串替换： 把3中的1全部替换为2 (数字代表参数)
+$god_img = str_replace("/w0","",$god_img);
+
+
 5.26
 redis锁 的调用：
 1.setnx
