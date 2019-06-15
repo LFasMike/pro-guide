@@ -64,6 +64,12 @@ linux 查找目录或文件
  
  find ~ -iname  "*说明*"
 
+linux 查找某目录下包含关键字内容的文件
+grep -rn "test"  /data/reports
+find /root/ –type f |xargs grep “www”  (linux)
+
+ –type f : 文件类型是普通文件
+
 
 lsof -i:5001 
  最后再：./restart.sh
@@ -96,6 +102,8 @@ linux定时任务
 
 编辑： crontab -e   查看 crontab  -l
 
+```shell
+
 #以下是编辑中常用的：
 #every 10s
 #* * * * * sleep 10; /schdule_every_ten_sec.sh >> /log/schdule_every_ten_sec.log 2>&1
@@ -112,15 +120,13 @@ linux定时任务
 #every 12:00
 0 12 * * * /schedule_every_noon.sh >> /log/schedule_every_noon.log 2>&1
 
-
+```
 
 12.27
 shell rm命令：
 rm -r :删除目录
 rm -f : 删除文件
 -i ：执行前做个提醒
-
-
 
 12.3
 linux中读写 权限 执行 chmod 命令
