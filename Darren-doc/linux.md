@@ -1,5 +1,18 @@
 
 # linux 常用总结
+
+
+4.11
+shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
+
+
+12.31
+shell生产32位随机密码
+date | md5sum |cut -c-32
+
+linux在shell中获取文件目录地址、全地址
+root_dir=$(cd "$(dirname "$0")";pwd)
+
  //目录空间占用
 linux: du -h --max-depth=1
 macos: du -h -d 1
@@ -141,3 +154,13 @@ reboot
 telnet 39.108.61.252 9092
  
  
+ 
+12.3
+linux中读写 权限 执行 chmod 命令
+-rw------- (600)      只有拥有者有读写权限。
+-rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。
+-rwx------ (700)     只有拥有者有读、写、执行权限。
+-rwxr-xr-x (755)    拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
+-rwx--x--x (711)    拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
+-rw-rw-rw- (666)   所有用户都有文件读、写权限。
+-rwxrwxrwx (777)  所有用户都有读、写、执行权限。
