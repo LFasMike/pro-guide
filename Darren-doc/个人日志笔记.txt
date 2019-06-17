@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 6.15
 linux 磁盘使用情况
 df -h /var
@@ -27,6 +28,8 @@ redis锁 的调用：
 
 
 
+=======
+>>>>>>> c03cd2b488f2585fbbbb8ddcb2235d1925d2620c
 5.22
 //忽略本地依赖
 composer --ignore-platform-reqs require laoyuegou/smartnormalizer
@@ -66,77 +69,12 @@ $data = PlayGodAcceptSetting::query()
   ->first();
 
 
-linux在shell中获取文件目录全地址
-root_dir=$(cd "$(dirname "$0")";pwd)
 
-function curlGet($url, $user_agent = "")
-{
-    //初始化
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    //执行并获取HTML文档内容
-    $output = curl_exec($ch);
-    curl_close($ch);
-    return $output;
-}
-
-function curlPost($url, $post)
-{
-    //初始化
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url); // 要访问的地址
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // 获取的信息以文件流的形式返回
-    curl_setopt($ch, CURLOPT_HEADER, 0); // 显示返回的Header区域内容
-    curl_setopt($ch, CURLOPT_POST, 1); // 发送一个常规的Post请求
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post); // Post提交的数据包
-    curl_setopt($ch, CURLOPT_TIMEOUT, 30); // 设置超时限制防止死循环
-    //执行并获取HTML文档内容
-    $output = curl_exec($ch);
-    curl_close($ch);
-    return $output;
-}
-
-4.11
-shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
-
-php合并数组方式 
-1：array_merge();  合并后不保留健值，
-2 $arr + $arr1  保留键值 若健值重复则优先取前面的
 
 4.10
 php命令启动：php -S 127.0.0.1:9999 -t ./public
 php -S 127.0.0.1:9998 -t ./public >> /usr/local/var/log/php7.log 2>&1 &
-php合并变量成为数组
 
-
-3.28
-/**
- * 二维数组根据某个字段排序
- * @param array $array 要排序的数组
- * @param string $keys   要排序的键字段
- * @param string $sort  排序类型  SORT_ASC     SORT_DESC 
- * @return array 排序后的数组
- */
- function arraySort($array, $keys, $sort = SORT_DESC) {
-        $keysValue = [];
-        foreach ($array as $k => $v) {
-            $keysValue[$k] = $v[$keys];
-        }
-        array_multisort($keysValue, $sort, $array);
-        return $array;
-    }   
-
-3.11
-php内部开启动 webserver
-php -S localhost:8888
-
-
-2.28
-去掉空格
-$sort = trim($sort);
 
 
 2.16
@@ -153,15 +91,6 @@ $sort = trim($sort);
 2：疑问： 为什么有时候对象方法使用数组作为参数传递就会不成功，（最后转为json才解决传递参数问题）
 
 
-
-1.10
-数组去空、去重处理
-array_unique(array_filter())
-
-#合并数组 去空去重，
-  implode(',', array_unique(array_filter(array_merge($user_ids, $add_user_ids))));
-
-
 1.9开通https顺序：
 
 1：现在阿里云开通安全组，
@@ -172,9 +101,7 @@ array_unique(array_filter())
 php 配置文件php.ini文件的动态设置与获取
 ini_get正好和ini_set相反
 
-防止sql注入的PHP函数：
-addslashes（）
-stripslashes（）
+
 
 
 1.5
@@ -202,10 +129,6 @@ kill -USR1 $(cat /usr/local/nginx/logs/nginx.pid)
 
 将上面的脚本开启到crontab中，每天来运行
 
-
-12.31
-shell生产32位随机密码
-date | md5sum |cut -c-32
 
 12.29
 实现php类的多继承：trait
@@ -253,32 +176,9 @@ Sorted Set——有序集合
   $key = "or 1=1 --";
   即可实现注入手段
 
-12.13
-php字符串比较忽略大小写进行比较：
-  strcasecmp()
-这是不忽略大小写：strcmp（）
-
-
-php时间戳转换
- strval(date('m-d H:i', time()));
-
-
 12.12
 数据库创建索引：
 create index manager_id_on_groups on groups(manager_id);
-
-
-绿色上网
-启动SSR：
-/etc/init.d/shadowsocks-r start
-退出SSR：
-/etc/init.d/shadowsocks-r stop
-重启SSR：
-/etc/init.d/shadowsocks-r restart
-SSR状态：
-/etc/init.d/shadowsocks-r status
-卸载SSR：
-./shadowsocks-all.sh uninstall
 
 12.10
 
@@ -294,12 +194,22 @@ set  +H
 来解决关闭忽略命令
 
 
-2：php 检查目录和检查文件是否存在 创建目录
- is_dir($dir)
- file_exists($file);
- mkdir($dir,0777,true);
-          
- 
+2:检索所有文件中匹配的字符串(find)
+我一般使用: grep -nri key_word ./*
+grep -i pattern files ：不区分大小写地搜索。默认情况区分大小写， 
+
+grep -l pattern files ：只列出匹配的文件名， 
+
+grep -L pattern files ：列出不匹配的文件名， 
+
+grep -w pattern files ：只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’）， 
+
+grep -C number pattern files ：匹配的上下文分别显示[number]行， 
+
+grep pattern1 | pattern2 files ：显示匹配 pattern1 或 pattern2 的行， 
+
+grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。 
+
 
 
 12.1 今天重新安装nginx 开始报错openssl找不到
@@ -328,83 +238,6 @@ Configuration summary
 
 
 
-
-11.28
-PHP posix_getpid 取得当前服务器进程号
-
-10.18
-
- static function reqAddGroup($group_id, $user_ids, $invite_id, $way)
-    {
-        if (isBlank($group_id) || isBlank($user_ids) || isBlank($invite_id)) {
-            return [ERROR_CODE_FORM, GROUP_ADD_STATUS_FAIL, '参数错误',''];
-        }
-        $user_ids = explode(',', $user_ids);
-
-        $group = \Groups::findFirstById($group_id);
-
-        if (isBlank($group)) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '群不存在',''];
-        }
-
-        if ($group->people_num >= 500) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '该群已满',''];
-        }
-
-        if (GROUP_STATUS_ON != $group->status) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '该群不可用',''];
-        }
-
-        #申请加群
-        if ($way == GROUP_ASK_USER) {
-            $cond = ['group_id' => $group_id, 'user_id' => $user_ids[0]];
-            $in_group = \GroupUsers::findFirstBy($cond);
-            if (isPresent($in_group)) {
-                return [ERROR_CODE_SUCCESS,'', '你已在群内', ['url' => 'app://groups/direct?group_id=' . $group_id]];
-
-            }
-
-            $result = GroupUsers::notifyTimeLock($user_ids, $group);
-            if ($result == 'exist') {
-                return [ERROR_CODE_FAIL, '','群主在审核中', ''];
-
-            }
-        }
-
-        $cond = ['group_id' => $group_id, 'user_id' => $invite_id];
-        $in_group = \GroupUsers::findFirstBy($cond);
-        if (isBlank($in_group)) {
-
-            $tip = $way == GROUP_ADD_USER ? '你不在群内' : '二维码失效';
-            return [ERROR_CODE_FAIL, '', $tip, ''];
-        }
-
-        #默认数百状态
-        $status = GROUP_ADD_STATUS_FAIL;
-
-        #判断是否群主邀请或不需要验证，直接邀请成功
-        if ($group->isVerifyStatusOff() || ($group->isManager($invite_id) && $way == GROUP_ADD_USER) ) {
-            self::addUsers($user_ids, $group, $invite_id, $way, true);
-
-            #重定义群名称/群头像
-            $group->updateGroupName($invite_id);
-
-            $status = GROUP_ADD_STATUS_SUCCESS;
-        } else {
-            #非群主邀请，需要群主审核
-            $result = GroupUsers::notifyTimeLock($user_ids, $group);
-            if ($result != 'exist') {
-                GroupPush::noticeManageAgree($invite_id, $group, $user_ids, $way);
-            }
-
-            \GroupPush::tipNeedManageAgree($group, $invite_id, $way);
-            $status = GROUP_ADD_STATUS_WAIT;
-        }
-
-        $reason = self::$GROUP_ADD_STATUS_TEXT[$status];
-        return [ERROR_CODE_SUCCESS, $status, $reason,''];
-    }
-
 9.18
 社会一小步，没有同情，没有怜悯，你强任你行，你弱就闭嘴，
 这都是闲的，导致大家发生争执
@@ -412,91 +245,7 @@ PHP posix_getpid 取得当前服务器进程号
 少说几句话，做事走走心，不要傻不拉几
 哎
 
- 
-10.18
-
- static function reqAddGroup($group_id, $user_ids, $invite_id, $way)
-    {
-        if (isBlank($group_id) || isBlank($user_ids) || isBlank($invite_id)) {
-            return [ERROR_CODE_FORM, GROUP_ADD_STATUS_FAIL, '参数错误',''];
-        }
-        $user_ids = explode(',', $user_ids);
-
-        $group = \Groups::findFirstById($group_id);
-
-        if (isBlank($group)) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '群不存在',''];
-        }
-
-        if ($group->people_num >= 500) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '该群已满',''];
-        }
-
-        if (GROUP_STATUS_ON != $group->status) {
-            return [ERROR_CODE_FAIL, GROUP_ADD_STATUS_FAIL, '该群不可用',''];
-        }
-
-        #申请加群
-        if ($way == GROUP_ASK_USER) {
-            $cond = ['group_id' => $group_id, 'user_id' => $user_ids[0]];
-            $in_group = \GroupUsers::findFirstBy($cond);
-            if (isPresent($in_group)) {
-                return [ERROR_CODE_SUCCESS,'', '你已在群内', ['url' => 'app://groups/direct?group_id=' . $group_id]];
-
-            }
-
-            $result = GroupUsers::notifyTimeLock($user_ids, $group);
-            if ($result == 'exist') {
-                return [ERROR_CODE_FAIL, '','群主在审核中', ''];
-
-            }
-        }
-
-        $cond = ['group_id' => $group_id, 'user_id' => $invite_id];
-        $in_group = \GroupUsers::findFirstBy($cond);
-        if (isBlank($in_group)) {
-
-            $tip = $way == GROUP_ADD_USER ? '你不在群内' : '二维码失效';
-            return [ERROR_CODE_FAIL, '', $tip, ''];
-        }
-
-        #默认数百状态
-        $status = GROUP_ADD_STATUS_FAIL;
-
-        #判断是否群主邀请或不需要验证，直接邀请成功
-        if ($group->isVerifyStatusOff() || ($group->isManager($invite_id) && $way == GROUP_ADD_USER) ) {
-            self::addUsers($user_ids, $group, $invite_id, $way, true);
-
-            #重定义群名称/群头像
-            $group->updateGroupName($invite_id);
-
-            $status = GROUP_ADD_STATUS_SUCCESS;
-        } else {
-            #非群主邀请，需要群主审核
-            $result = GroupUsers::notifyTimeLock($user_ids, $group);
-            if ($result != 'exist') {
-                GroupPush::noticeManageAgree($invite_id, $group, $user_ids, $way);
-            }
-
-            \GroupPush::tipNeedManageAgree($group, $invite_id, $way);
-            $status = GROUP_ADD_STATUS_WAIT;
-        }
-
-        $reason = self::$GROUP_ADD_STATUS_TEXT[$status];
-        return [ERROR_CODE_SUCCESS, $status, $reason,''];
-    }->get(STOP_MARK_COMSUME);
-//            info('consumer_flag_mark : ',$flag_mark,'@@@@',$parm);
-//
-//            if($flag_mark == 0 && $flag_mark != ''){
-//                info('这是关闭的节奏');
-//                break;
-//            }
-//            info(getmypid(),'*****',posix_getpid());
-//            info(date('H:i:s'));
-//            sleep(2);
-//
-//        }
-
+  
 9.15
 
  $no = shell_exec("ps ax| grep -i 'order_details'  | grep -v grep | awk '{print $1}'");
@@ -543,44 +292,7 @@ PHP posix_getpid 取得当前服务器进程号
 9.4
 服务器端错误日志位置：
 tail -f /usr/local/system/log/error.log
-
-梁哥的api  app_key
-
-http://ex.haobtc.io/api/commission?page=1&sid=21sca5a66a22a9dcd55317da7efe874e1f737&code=test&client=web&dno=3318138278&t=1536072675071&h=a7885372a067bf913d494f30bed2546a
-
-9.3
-老铁，找你帮忙啦，写一个sql语句：
-
-就是一个表里，原本关系是一对一：user表对这个某某某表  user中的id 对应这个某某某表里的user_id （一对一的关系）      
-但是目前存在很多两条user_id 在这个某某某表里，
-
-我想做一个SQL语句，把所有多出来的这一条数据在某某某表中删掉，且删除的是某某某表id较小的那一条。
-
-最后结果就是查出来 user表对应某某某表  是id对user_id 一对一关系，
-
-用这个sql查询结果返回0条就行：
-select * from user_commission p1,user_commission p2 where p1.user_id=p2.user_id and p1.id!=p2.id;
  
-delete from user_commission 
-where user_id in 
-(select user_id from user_commission group by user_id having count(user_id) > 1) 
-and id not in (select Max(id) from user_commission group by user_id having count(user_id )>1);
-
-现在两个表  user  和user_record
-user 里的id  在user_record里 字段名叫做  user_id
-原本关系是user 的id对应 user_record 表里的user_id 一一对应， 现在user_record表里，有部分数据，是存在两条user_id
-
-目标是删除user_record 里多余的记录， 而且要删除重复中，id较小的那条数据。
-
-  
-  select * from user_record p1,user_record p2 where p1.user_id=p2.user_id and p1.id!=p2.id;
-8.29
-任务：给网站目录授权，创建目录
-
-Bt-Panel: http://47.100.56.225:8888
-username: adppdytw
-password: 73fbfbae
-
 
 8.28
 今天在本机上运行了一个原来的网站项目，部署上去，发现服务器配置一直不对，导致网站不能访问，
