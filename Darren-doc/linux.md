@@ -1,5 +1,15 @@
-
 # linux 常用总结
+
+
+6.16
+#### 环境变量 export命令
+```shell
+export -p #列出全部环境变量
+
+export PATH=$PATH:123...  #临时导入，若永久的，请在bash_file脚本中添加
+
+```
+
  //目录空间占用
 linux: du -h --max-depth=1
 macos: du -h -d 1
