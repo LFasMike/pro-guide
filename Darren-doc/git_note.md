@@ -1,6 +1,8 @@
 
 # git 基本操作
 
+git clean -df 清空当前本地所有变更
+
 git init
 添加远程仓库地址
 
