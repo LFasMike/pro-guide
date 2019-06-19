@@ -49,6 +49,8 @@ git reset --hard HEAD^
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
 
+git撤销本地所有为更改的提交
+git clean -df
 
 
 git 

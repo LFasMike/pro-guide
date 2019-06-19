@@ -1,6 +1,15 @@
-
 # linux 常用总结
 
+
+
+6.16
+#### 环境变量 export命令
+```shell
+export -p #列出全部环境变量
+
+export PATH=$PATH:123...  #临时导入，若永久的，请在bash_file脚本中添加
+
+```
 
 4.11
 shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
@@ -12,6 +21,7 @@ date | md5sum |cut -c-32
 
 linux在shell中获取文件目录地址、全地址
 root_dir=$(cd "$(dirname "$0")";pwd)
+
 
  //目录空间占用
 linux: du -h --max-depth=1
