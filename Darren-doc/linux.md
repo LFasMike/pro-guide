@@ -18,7 +18,7 @@ shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log
 12.31
 shell生产32位随机密码
 date | md5sum |cut -c-32
-
+pro
 linux在shell中获取文件目录地址、全地址
 root_dir=$(cd "$(dirname "$0")";pwd)
 
