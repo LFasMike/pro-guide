@@ -3,3 +3,15 @@ go  进度：
 
 Go中引入的Exception处理：defer, panic, recover
 
+
+func logs()  {
+	f, err := os.OpenFile("logfile.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("file open error : %v", err)
+	}
+	defer f.Close()
+	log.SetOutput(f)
+	//log.Println("This is a Darren test log entry"+time.Now().Format("2006/01/02 15:04:05"))
+	log.Println("This is a Darren test log entry")
+
+}
