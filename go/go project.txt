@@ -3,3 +3,6 @@ go  进度：
 
 Go中引入的Exception处理：defer, panic, recover
 
+
+在main中使用fun 时表示：
+已并发的方式调用匿名函数func 以协程的方式运行
