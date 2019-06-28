@@ -1,6 +1,8 @@
 # linux 常用总结
 
-
+6.26
+crontab跑脚本  指定服务器
+curl https://.....?user_id=9 --resolve "appv2.lygou.cc:443:172.16.163.252"
 
 6.16
 #### 环境变量 export命令

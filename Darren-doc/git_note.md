@@ -15,6 +15,8 @@ git reset --soft HEAD^   将在未push提交的撤销  一次
 git push -u origin master  （加-u  项指定一个默认主机，这样后面就可以直接用push）
 git push <远程主机名> <本地分支名>:<远程分支名>
 
+git -f push 强推版本覆盖远程
+
 使用到git熟悉命令： 
 Git global setup
 git config --global user.name "darren"
