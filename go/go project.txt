@@ -4,5 +4,21 @@ go  进度：
 Go中引入的Exception处理：defer, panic, recover
 
 
+
 在main中使用fun 时表示：
 已并发的方式调用匿名函数func 以协程的方式运行
+
+
+go 初始化消息时候，记录日志信息
+func logs()  {
+	f, err := os.OpenFile("logfile.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("file open error : %v", err)
+	}
+	defer f.Close()
+	log.SetOutput(f)
+	//log.Println("This is a Darren test log entry"+time.Now().Format("2006/01/02 15:04:05"))
+	log.Println("This is a Darren test log entry")
+
+}
+

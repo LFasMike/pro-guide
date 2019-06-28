@@ -84,3 +84,5 @@ git fetch origin aaa
 合并远程分支到本地
 git merge origin/aaa
 
+如果显示拒绝合并和提交时： 在你操作命令后面加--allow-unrelated-histories
+eg:  git merge master --allow-unrelated-histories
