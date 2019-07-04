@@ -7,9 +7,6 @@ git init
 添加远程仓库地址
 
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
-
-git add .
-git commit -m "Initial commit"
 git checkout -f
 git reset --soft HEAD^   将在未push提交的撤销  一次
 git push -u origin master  （加-u  项指定一个默认主机，这样后面就可以直接用push）
@@ -86,3 +83,11 @@ git merge origin/aaa
 
 如果显示拒绝合并和提交时： 在你操作命令后面加--allow-unrelated-histories
 eg:  git merge master --allow-unrelated-histories
+
+暂存功能
+git stash 将当前所有修改项(未提交的)暂存，压栈。此时代码回到你上一次的提交
+git stash list将列出所有暂存项。
+git stash clear 清除所有暂存项。
+git stash apply 将暂存的修改重新应用，
+
+

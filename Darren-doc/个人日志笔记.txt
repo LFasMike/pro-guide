@@ -180,6 +180,9 @@ Sorted Set——有序集合
 数据库创建索引：
 create index manager_id_on_groups on groups(manager_id);
 
+查看数据库索引
+SHOW INDEX FROM table_name
+
 12.10
 
 1，linux中 ！字符 默认被忽略历史命令，到时命令中含有该字符时不起作用

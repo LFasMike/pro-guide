@@ -1,0 +1,22 @@
+项目发布 到测试环境
+
+./deploy.sh live linux qa
+
+staging 环境
+./deploy.sh live linux stag
+
+redis 分布式锁
+
+日志位置：
+tailf /alidata/logs/live.00.log
+
+https://s7.lygou.cc/audio/f7bcd1bb22d46ca7c98ff72163450768
+
+
+c6faaada888511e9932200163e0d876d
+
+["c6faaada888511e9932200163e0d876d"]
+
+c6faaada888511e9932200163e0d876d
+
+46739dd886dc11e99e7500163e0de5f9
