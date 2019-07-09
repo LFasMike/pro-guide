@@ -1,21 +1,12 @@
 
-<<<<<<< HEAD
-6.15
-linux 磁盘使用情况
-df -h /var
-
-6.10
-php字符串替换： 把3中的1全部替换为2 (数字代表参数)
-$god_img = str_replace("/w0","",$god_img);
-
-
-5.26
+7.3
 redis锁 的调用：
 1.setnx
 2.expire
 3.delete
 解决的问题：
 利用 setnx 原子操作，保证了并发场景下 redis 锁的安全性
+
 方案二：
 对 redis 的调用：
 1.setnx
@@ -26,10 +17,37 @@ redis锁 的调用：
 3.redis value 值有效利用
 
 
+分布式加锁：
+核心代码：$redis->set("Lock:{$key}", 1, ['NX', 'EX' => $lockSecond]);
+ 
+    /**
+     * 尝试获取锁
+     * @param \Predis\Client $redis     redis客户端
+     * @param String $key               锁
+     * @param String $requestId         请求id
+     * @param int $expireTime           过期时间
+     * @return bool                     是否获取成功
+     */
+   if (!$lock_redis->set($lock_key, $mobile, ['NX', 'EX' => 2])) {
+      
+            return $this->renderJSON(ERROR_CODE_FAIL, '请求速度太快,请稍后再试');
+      }
+ 
+分布式解锁：（为什么要用 Lua 脚本来实现，主要是为了保证原子性. Redis 的 eval 可以保证原子性，主要还是源于 Redis 的特性）
+    function unlock($lock)
+    {
+        $this->del($lock);
+    }
 
 
-=======
->>>>>>> c03cd2b488f2585fbbbb8ddcb2235d1925d2620c
+6.15
+linux 磁盘使用情况
+df -h /var
+
+6.10
+php字符串替换： 把3中的1全部替换为2 (数字代表参数)
+$god_img = str_replace("/w0","",$god_img);
+
 5.22
 //忽略本地依赖
 composer --ignore-platform-reqs require laoyuegou/smartnormalizer
