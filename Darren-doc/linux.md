@@ -1,5 +1,26 @@
 # linux 常用总结
 
+7.23
+### supervisor常用命令
+查看程序状态
+sudo supervisorctl status
+读取新增配置（不启动）
+sudo supervisorctl reread
+重启配置更改过的程序
+sudo supervisorctl update
+### 控制所有进程
+sudo supervisorctl start all
+sudo supervisorctl stop all
+sudo supervisorctl restart all
+### 控制指定进程
+sudo supervisorctl stop testgroup:* 
+sudo supervisorctl start testgroup:*
+sudo supervisorctl restart testgroup:*
+sudo supervisorctl stop test
+sudo supervisorctl start test
+sudo supervisorctl restart test
+
+
 6.26
 crontab跑脚本  指定服务器
 curl https://.....?user_id=9 --resolve "appv2.lygou.cc:443:172.16.163.252"
