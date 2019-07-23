@@ -1,5 +1,6 @@
 # linux 常用总结
 
+
 7.23
 ### supervisor常用命令
 查看程序状态
@@ -19,6 +20,23 @@ sudo supervisorctl restart testgroup:*
 sudo supervisorctl stop test
 sudo supervisorctl start test
 sudo supervisorctl restart test
+
+
+7.12
+将目前目录下的所有档案与子目录的拥有者皆设为 users 群体的使用者 lamport :
+chmod -R lamport:users *
+-rw------- (600) – 只有属主有读写权限。
+-rw-r–r-- (644) – 只有属主有读写权限；而属组用户和其他用户只有读权限。
+-rwx------ (700) – 只有属主有读、写、执行权限。
+-rwxr-xr-x (755) – 属主有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
+-rwx–x--x (711) – 属主有读、写、执行权限；而属组用户和其他用户只有执行权限。
+-rw-rw-rw- (666) – 所有用户都有文件读、写权限。这种做法不可取。
+-rwxrwxrwx (777) – 所有用户都有读、写、执行权限。更不可取的做法。
+以下是对目录的两个普通设定:
+
+drwx------ (700) - 只有属主可在目录中读、写。
+drwxr-xr-x (755) - 所有用户可读该目录，但只有属主才能改变目录中的内容。
+
 
 
 6.26
