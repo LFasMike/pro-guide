@@ -1,0 +1,42 @@
+首先查看电脑当前的bash种类
+cat /etc/shells
+
+使用命令安装pip即可
+sudo easy_install pip
+
+安装powerline 
+pip install powerline-status --user
+
+安装字体库
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+
+安装高亮插件
+cd ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+vi ~/.zshrc
+找到plugins
+加上zsh-syntax-highlighting
+
+
+可选择、命令补全
+cd ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+找到plugins
+加上zsh-autosuggestion
+
+zsh 主题选用 显示路径和git情况
+~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+```bash
+local ret_status="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
+PROMPT='${ret_status} %{$fg[cyan]%}$PWD%{$reset_color%}$(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+```
+source ~/.zshrc
+
