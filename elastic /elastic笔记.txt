@@ -1,0 +1,34 @@
+7.31
+查询手册：https://www.elastic.co/guide/cn/elasticsearch/guide/current/_empty_search.html
+
+删除索引
+Delete /god_game_qa
+
+
+
+查询一个、多个或者 _all 索引库（indices）和一个、多个或者所有types中查询
+GET /index_2014*/type1,type2/_search
+{
+    "query": { }
+}
+
+
+分页
+GET /_search
+{
+  "from": 30,
+  "size": 10
+}
+
+条件查询
+{
+    "bool": {
+        "must":     { "match": { "tweet": "elasticsearch" }},
+        "must_not": { "match": { "name":  "mary" }},
+        "should":   [
+				      { "term": { "title": "brown" }},
+				      { "term": { "title": "fox"   }}
+				    ],
+        "filter":   { "range": { "age" : { "gt" : 30 }} }
+    }
+}
