@@ -1,6 +1,35 @@
 9.26学习docker
 
 
+1 查看docker镜像（images）后可以导出导入镜像以供下次使用
+
+docker save  contos：7 > /usr/local....
+导出：
+docker load < /usr/loacl....
+
+2检查网络 
+docker network inspect eosdev
+
+查看自己eos钱包账户中的公私钥匙
+keosd wallet private_keys -n my {钱包账户密码}
+
+my
+PW5KdgUK9jNajQZu4SSyys1BuQvcJBVvpMnm55AQJtCRcicrFMnUj
+
+darren
+PW5JgSoSimTbyYeVTBTSHBx8junY3TvT91qqucgRPpPH9sdY1LzdJ
+
+Private key: 5K1rNVJLtbc75fGxyqirTM6yTiLSAAxWzy2s3tMMAiKBEbChSyH
+Public key: EOS7JLqVDbfAw2nXGj7w5vrKz3LjMEZzhKnEkaG5PMqFmi6tXN2Hm
+
+
+Private key: 5J7UPHH365YVbxDvdskvy8RQHJuhtAuEWvYdNhoHrnr4wAkTt8X
+Public key: EOS6r98RvvTRuU2Q1grnoQ52kZaPfD1c9hoRXsfu4LiofEts6zYci
+
+docker run -d -p 80:80 --name webserver nginx
+$ docker stop webserver
+$ docker rm webserver
+
 docker run -d -p 80:80 --name webserver nginx
 $ docker stop webserver
 $ docker rm webserver

@@ -1,3 +1,6 @@
+安装iterm导入配置路径：
+``` ~/Library/Application Support/iTerm2/DynamicProfiles ```
+
 首先查看电脑当前的bash种类
 cat /etc/shells
 
