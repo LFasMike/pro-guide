@@ -1,5 +1,22 @@
 # linux 常用总结
+7.24
+查看systemctl的相关信息
+whereis systemctl
+列出所有可用单元
+systemctl list-unit-files
+列出所有运行中单元
+systemctl list-units
 
+# systemctl start httpd.service
+# systemctl restart httpd.service
+# systemctl stop httpd.service
+# systemctl reload httpd.service
+# systemctl status httpd.service
+# systemctl kill httpd
+
+ 命令
+ whereis 文件或者目录名称 
+ which 可执行文件名称
 
 7.23
 ### supervisor常用命令

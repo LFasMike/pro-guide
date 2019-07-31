@@ -23,7 +23,6 @@ func main() {
 
 ```
 
- 
 
 - byte 等同于int8，常用来处理ascii字符
 - rune 等同于int32,常用来处理unicode或utf-8字符

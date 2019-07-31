@@ -28,3 +28,31 @@ int转成string：
 string := strconv.Itoa(int)
 int64转成string： 
 string := strconv.FormatInt(int64,10)
+
+
+channl的发送和接收
+data := <- a // read from channel a  
+a <- data // write to channel a
+
+内建函数：两个的区别
+var p *[]int = new([]int)      初始化一个指针
+var v []int = make([]int, 10)  初始化一个数据结构以及值
+
+
+go get +  
+-d 只下载不安装
+-f 只有在你包含了-u参数的时候才有效，不让-u去验证import中的每一个都已经获取了，这对于本地fork的包特别有用
+-fix 在获取源码之后先运行fix，然后再去做其他的事情
+-t 同时也下载需要为运行测试所需要的包
+-u 强制使用网络去更新包和它的依赖包
+-v 显示执行的命令
+
+
+
+了解下：
+ 空结构体   
+
+ rune ~~ int32
+
+ golang  testing
+

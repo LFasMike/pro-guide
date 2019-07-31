@@ -2,6 +2,8 @@
 
 ./deploy.sh live linux qa
 
+./deploy.sh godgame linux qa
+
 staging 环境
 ./deploy.sh live linux stag
 
@@ -10,15 +12,34 @@ redis 分布式锁
 日志位置：
 tailf /alidata/logs/live.00.log
 
+配置位置
+/home/land/beast/conf.d/godgame.json
 
-https://s7.lygou.cc/audio/f7bcd1bb22d46ca7c98ff72163450768
+
+ 
+ 框架内自己的 protoc3 找不到位置：
+ 解决： 去除系统目录bin下的，
+ 应该在/Users/darren/go/src/vendor/iceberg/frame/protoc-gen-go下 
+ 运行 go build
+ 生成可执行文件后 mv到 ~/go/bin
+ 查看which protoc-gen-go
+ 若在系统目录/usr/local/bin下 则进去删掉或改名字
+ 在查看，即可解决
 
 
-c6faaada888511e9932200163e0d876d
+查询相关api汇总在：
+/Users/darren/go/src/platform/play/server/main.go
 
-["c6faaada888511e9932200163e0d876d"]
 
-c6faaada888511e9932200163e0d876d
+go首页查询大神列表 queryGods
+/Users/darren/go/src/godgame/api/god.go  
 
-46739dd886dc11e99e7500163e0de5f9
 
+写api 服务位置
+/Users/darren/go/src/vendor/laoyuegou.pb/godgame/pb/services.proto
+
+
+//
+brew install protobuf
+
+brew install protoc-gen-go

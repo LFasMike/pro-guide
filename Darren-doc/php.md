@@ -1,6 +1,13 @@
 
 # php 内部函数日常总结
 
+7.24
+
+查看配置文件路径
+php --ini
+
+
+
 
 
 截取字符串 substr('string',0,1);
@@ -110,9 +117,10 @@ PHP posix_getpid 取得当前服务器进程号
    
 php获取当前目录  执行命令目录
     getcwd();
-php执行shell命令
+php执行shell命令 最后一行
   exec($pwd);
-
+打印全部行
+shell_exec("") 
 
 取前一天的0点整点时间戳
  strtotime(date('Y-m-d',strtotime('-1 day')))
