@@ -4,6 +4,7 @@
 
 ./deploy.sh godgame linux qa
 
+
 staging 环境
 ./deploy.sh live linux stag
 
