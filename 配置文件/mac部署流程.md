@@ -32,6 +32,7 @@ vi ~/.zshrc
 
 zsh 主题选用 显示路径和git情况
 ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+
 ```bash
 local ret_status="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 PROMPT='${ret_status} %{$fg[cyan]%}$PWD%{$reset_color%}$(git_prompt_info)'
@@ -40,6 +41,14 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
 ```
+
+编辑 vim ~/.zshrc
+setopt HIST_IGNORE_DUPS  #可以消除重复记录
+source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
+
+最后
 source ~/.zshrc
 

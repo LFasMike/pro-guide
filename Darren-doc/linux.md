@@ -66,6 +66,7 @@ curl https://.....?user_id=9 --resolve "appv2.lygou.cc:443:172.16.163.252"
 
 6.16
 #### 环境变量 export命令
+
 ```shell
 export -p #列出全部环境变量
 
@@ -74,8 +75,12 @@ export PATH=$PATH:123...  #临时导入，若永久的，请在bash_file脚本�
 ```
 
 4.11
-shell挂起命令  nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
+shell挂起命令  
 
+```shell
+nohup php artisan make:console  start >> log/redis_orders.log 2>&1 &
+
+```
 
 12.31
 shell生产32位随机密码

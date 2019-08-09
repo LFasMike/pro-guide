@@ -1,9 +1,24 @@
+
+orders_stream 表中 type:
+// 定义支付类型
+const (
+    ORDER_PAYMENT_TYPE_MASTER     = int64(1) // 订单
+    ORDER_PAYMENT_TYPE_SUPPLEMENT = int64(2) // 补差价
+    ORDER_PAYMENT_TYPE_MULTI      = int64(3) // 多订单
+)
+
+
+
+在服务下调用db数据库 ，需要生产sql客户端， 
+一般跨服务调用，建议用RPC内部接口方式调用
+
+查看当前服务所用分支
+./beast/bin/plorder_linux_amd64 -h
+./beast/bin/plorder_linux_amd64 -v
+
 项目发布 到测试环境
-
 ./deploy.sh live linux qa
-
 ./deploy.sh godgame linux qa
-
 
 staging 环境
 ./deploy.sh live linux stag
@@ -15,8 +30,6 @@ tailf /alidata/logs/live.00.log
 
 配置位置
 /home/land/beast/conf.d/godgame.json
-
-
  
  框架内自己的 protoc3 找不到位置：
  解决： 去除系统目录bin下的，

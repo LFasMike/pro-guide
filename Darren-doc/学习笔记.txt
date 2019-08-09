@@ -1,5 +1,14 @@
     学习笔记
 
+8.1
+判断标志符号：
+lt：less than 小于
+le：less than or equal to 小于等于
+eq：equal to 等于
+ne：not equal to 不等于
+ge：greater than or equal to 大于等于
+gt：greater than 大于
+
 命名空间完全限定名称 和不完全限定名称 后置绑定
 
 self  和 static
@@ -267,7 +276,7 @@ chsh -s /bin/zsh
 zsh不存储历史记录的问题
 解决：将~/目录下的这个文件加上权限，就ok了~
 sudo chmod 777 .zsh_history
-.zshrc 中添加 setopt HIST_IGNORE_DUPS 可以消除重复记录
+.zshrc 中添加 setopt HIST_IGNORE_DUPS  #可以消除重复记录
 
 
 记录下新的坑！！！设置了每次开机fpm，导致启动后，并没有加载到后面启动的bash_profile 以至于里面的环境变量没有被加载到，
