@@ -51,6 +51,7 @@ alias ppc='php cli.php'
 alias varlog='cd /usr/local/var/log'
 alias mamplog='/Applications/MAMP/logs'
 alias 查的='cd '
+alias prosss='source /etc/profile'
 
 #配置显示当前目录
 PROMPT='%{$fg[cyan]%}$PWD%{$reset_color%} $(git_prompt_info)'
