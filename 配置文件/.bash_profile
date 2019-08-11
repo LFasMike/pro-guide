@@ -2,11 +2,13 @@ source ~/.profile
 #更新脚本
 source ~/projects/baolei/lib/completion.bash
 
-#golang
-export GOPATH=~/go
+###############goland
+export GO111MODULE=off
 export GOROOT=/usr/local/go
-#export GO111MODULE=on
-alias cdnsq='~/go/src/github.com/nsqio/nsq'
+export GOPATH=/Users/darren/go
+export PATH=$PATH:/Users/darren/go/src/github.com/beego/bee/
+export PATH=$PATH:$GOPATH/bin
+export DEPLOY_PATH=/Users/darren/go/src/deploy
 
 
 #捞月狗
@@ -18,6 +20,18 @@ alias tasklyg='ssh land@172.16.163.251'
 alias log_lyg='./jumpto vpcplayground_01'
 alias order_php_ssh_lyg='./jumpto  vpcplayground_10'
 alias play_admin_lyg_ssh='ssh land@172.16.163.255'  #./jumpto peiwan_om_test
+alias lygapp='/Users/darren/projects/lyg_app'
+alias tasklyg='ssh land@172.16.163.251'
+alias log_lyg='./jumpto vpcplayground_01'
+alias order_php_ssh_lyg='ssh land@172.16.164.209'  #ssh land@172.16.164.20
+alias hui-lyg='ssh land@172.16.34.15' #phpgray
+
+#go服务器
+alias go-test='ssh land@114.55.111.198'
+alias go-stag='ssh land@114.55.57.29'
+
+alias order-start='php -S 127.0.0.1:9988 -t /Users/darren/projects/order_php/public >> /usr/local/var/log/php7.log 2>&1 &'
+alias god-start='php -S 127.0.0.1:9998 -t /Users/darren/projects/god_php/public >> /usr/local/var/log/php7.log 2>&1 &'
 
 
 #redis地址
@@ -29,8 +43,8 @@ alias redis_go_pro_play='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.c
 alias redis_app_prod='redis-cli -h a5c33907a2e04ca3424.redis.rds.aliyuncs.com -a a5c33907a2e04ca3:LOYOGOU2015redis' 
 
 #app仓库 的user·库
-
 alias redis_app_test='redis-cli -h 4c6174ac080711e5.m.cnhza.kvstore.aliyuncs.com -a 4c6174ac080711e5:LOYOGOU2015redis'
+
 
 
 #自定义快捷命令
@@ -66,11 +80,6 @@ alias sshlivaway='ssh superadmin@47.96.231.54'
 alias sshengine='ssh root@45.32.42.197'
 
 #项目使用快捷操作
-alias otc='cd ~/projects/otc_php'
-alias qianbao='cd ~/projects/otceasy_php'
-alias shop='~/projects/projectmc'
-alias api='cd ~/projects/WechatApi'
-alias kafkaconfig='/usr/local/etc/kafka'
 alias ppt='php artisan tinker '
 alias ppa='php artisan '
 
@@ -103,26 +112,21 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+
 #终端代理配置 开启后每次打开终端都生效
 #export http_proxy='http://localhost:8118'
 #export https_proxy='http://localhost:8118'
 
-#alias proxyopen='/usr/local/sbin/privoxy /usr/local/etc/privoxy/config'
-#alias proxys='export all_proxy=socks5://127.0.0.1:1086'
-#alias unproxy='unset all_proxy'
-
 function proxy_off(){
-	unset http_proxy
-		unset https_proxy
-		echo -e "已关闭代理"
+    unset http_proxy
+    unset https_proxy
+    echo -e "已关闭代理"
 }
 
-alias proxyopen='sudo /usr/local/sbin/privoxy /usr/local/etc/privoxy/config'
 function proxy_on() {
-		proxyopen
-		export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-#export http_proxy="http://127.0.0.1:8118"
-		export http_proxy="http://127.0.0.1:1087"
-		export https_proxy=$http_proxy
-		echo -e "已开启代理"
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export http_proxy="http://127.0.0.1:1087"
+    export https_proxy=$http_proxy
+    echo -e "已开启代理"
 }
+
