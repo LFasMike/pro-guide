@@ -1,3 +1,5 @@
+单元测试：
+go test api/go_test.go -v -run="TestFirst" 
 
 orders_stream 表中 type:
 // 定义支付类型
@@ -6,8 +8,6 @@ const (
     ORDER_PAYMENT_TYPE_SUPPLEMENT = int64(2) // 补差价
     ORDER_PAYMENT_TYPE_MULTI      = int64(3) // 多订单
 )
-
-
 
 在服务下调用db数据库 ，需要生产sql客户端， 
 一般跨服务调用，建议用RPC内部接口方式调用

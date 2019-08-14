@@ -29,13 +29,15 @@ git config --global mergetool.keepBackup false
 查看本地所有分支
 git branch  
 查看所有分支
-git branch -a  
+git branch -a 
+查看远程分支 
+git branch -r 
 创建分支
 git branch new   \\ git checkout -b new  等效
 删除本地分支
 branch -d old  
 删除远程分支
-git push origin --delete zzy-test
+git branch -r -d origin/branch-name  先删除本地该分支，在覆盖远程
 
 git remote -v 查看远程版本库信息
 

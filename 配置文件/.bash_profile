@@ -28,7 +28,11 @@ alias hui-lyg='ssh land@172.16.34.15' #phpgray
 
 #go服务器
 alias go-test='ssh land@114.55.111.198'
-alias go-stag='ssh land@114.55.57.29'
+#alias go-test='ssh land@172.16.164.248'
+alias go-stag1='ssh land@172.16.164.179'
+alias go-stag2='ssh land@172.16.164.180'
+alias go-stag3='ssh land@172.16.164.181'
+
 
 alias order-start='php -S 127.0.0.1:9988 -t /Users/darren/projects/order_php/public >> /usr/local/var/log/php7.log 2>&1 &'
 alias god-start='php -S 127.0.0.1:9998 -t /Users/darren/projects/god_php/public >> /usr/local/var/log/php7.log 2>&1 &'
