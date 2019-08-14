@@ -1,3 +1,9 @@
+8.15由于8月laravel不再提供composer
+所以替换阿里云的
+  "url": "https://packagist.laravel-china.org"
+  "url": "https://mirrors.aliyun.com/composer/"
+
+
 7.3
 redis锁 的调用：
 1.setnx
