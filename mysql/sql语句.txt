@@ -3,3 +3,16 @@
 UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
 
 UPDATE Person SET FirstName = 'Fred' WHERE LastName = 'Wilson' 
+
+
+join
+
+SELECT Persons.id, Persons.LastName, Persons.FirstName, Orders.id,Orders.OrderNo,Orders.Pid
+FROM Persons
+INNER JOIN Orders
+ON Persons.id = Orders.Pid
+
+
+SELECT column-names
+  FROM table-name
+ WHERE column-name IN (values) 
