@@ -89,11 +89,6 @@ pro
 linux在shell中获取文件目录地址、全地址
 root_dir=$(cd "$(dirname "$0")";pwd)
 
-
- //目录空间占用
-linux: du -h --max-depth=1
-macos: du -h -d 1
-
 重定向目录文件，移动
 mv -f dir1 dir2
 
@@ -120,8 +115,6 @@ ansible使用
 
 测试：
 ansible all -m ping -u xxx
-
-
 
 下载包命令
 curl -O http://openresty.org/download/drizzle7-2011.07.21.tar.gz
@@ -171,8 +164,6 @@ find . -type f -size +50M  -print0 | xargs -0 du -h | sort -nr
 列出所有的端口
 netstat -ntlp
 
-
-
 查看Linux查看内核版本
 cat /proc/versio
 uname -a
@@ -184,9 +175,6 @@ lsb_release -a
 
 一次性递归新建目录命令
 mkdir -p
- 
-
-
 
 linux定时任务
 
@@ -254,12 +242,16 @@ df -h
 
 查看当前目录每个文件夹的情况
 du --max-depth=1 -h   /usr/
+当前目录下大于500M目录
+du -sh * -t +500M
 列出当前文件夹下所有文件对应的大小
 du -sh  *
 查看磁盘各分区大小
 df -h
 
-
+ //目录空间占用
+linux: du -h --max-depth=1
+macos: du -h -d 1
 
 ps aux 和ps -ef 
 两者的输出结果区别不大，但展示风格不同。aux是BSD风格，-ef是System V风格
