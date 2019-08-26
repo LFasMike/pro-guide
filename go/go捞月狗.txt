@@ -1,3 +1,16 @@
+gorm数据操作
+
+DATE_FORMAT( `create_time`, '%Y%m%d') < '20190701'  是把2019-08-20 17:40:14 转换过去的
+
+DATE_FORMAT(from_unixtime( `create_time` ), '%Y%m%d') < '20190701'")  是把 1566340543转换过去的
+
+
+
+supervisorctl配置文件目录：
+/home/land/beast/conf.d
+重启 需要先切到home目录下
+supervisorctl update
+
 单元测试：
 go test api/go_test.go -v -run="TestFirst" 
 

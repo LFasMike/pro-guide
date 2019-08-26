@@ -221,7 +221,7 @@ vimgrep前面可以加数字限定搜索结果的上限，如
 :vim/^d{1,}./ %
 然后用:cw或:copen查看结果，可以用C-w H把quickfix窗口移到左侧，
 就更像个目录了。
-7.2 替换
+7.2 vim快速替换 
 
     :s/old/new - 用new替换当前行第一个old。
     :s/old/new/g - 用new替换当前行所有的old。
