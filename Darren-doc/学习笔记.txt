@@ -1,5 +1,7 @@
     学习笔记
 
+
+
 8.1
 判断标志符号：
 lt：less than 小于
@@ -388,10 +390,6 @@ sudo launchctl load /Library/LaunchDaemons/io.redis.redis-server.plist
 sudo launchctl stop io.redis.redis-server
 
 7.19
-
-
- 
-
 php_sapi_name — 返回 web 服务器和 PHP 之间的接口类型
 
 7.18 
@@ -399,6 +397,7 @@ php_sapi_name — 返回 web 服务器和 PHP 之间的接口类型
  composer清理缓存
  rm -rf ~/.composer/cache/
 composer clearcache
+composer clear-cache
 
 
 7月17日

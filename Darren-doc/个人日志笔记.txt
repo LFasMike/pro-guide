@@ -1,8 +1,23 @@
+
+8.20
+laravel 启动队列任务 报错 apcu 不存在
+需要在配置文件env中改用file式 和redis做驱动
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+SESSION_DRIVER=array
+SESSION_LIFETIME=120
+QUEUE_CONNECTION=redis
+生产环境：
+BROADCAST_DRIVER=log
+CACHE_DRIVER=redis
+QUEUE_CONNECTION=redis
+SESSION_DRIVER=array
+SESSION_LIFETIME=120
+
 8.15由于8月laravel不再提供composer
 所以替换阿里云的
   "url": "https://packagist.laravel-china.org"
   "url": "https://mirrors.aliyun.com/composer/"
-
 
 7.3
 redis锁 的调用：

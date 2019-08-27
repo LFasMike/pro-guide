@@ -1,4 +1,7 @@
 # linux 常用总结
+8.22
+linux权限分配
+–rwxr-xr-x 转换成权限数字为755
 7.24
 查看systemctl的相关信息
 whereis systemctl
