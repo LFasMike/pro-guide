@@ -1,4 +1,10 @@
 # linux 常用总结
+9.6常用远程命令， 拷贝复制
+ssh land@172.16.164.9999 "rm -f ~/bin/game-server"
+scp game-server land@172.16.164.9999:~/bin 
+ssh land@172.16.164.9999 "supervisorctl restart gameserver:"
+
+
 8.22
 linux权限分配
 –rwxr-xr-x 转换成权限数字为755
