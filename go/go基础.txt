@@ -70,11 +70,22 @@ go get +
 -v 显示执行的命令
 
 
+打印格式：
+%v  值的默认格式。当打印结构体时，“加号”标记（%+v）会添加字段名
+%#v　相应值的Go语法表示
+%T  相应值的类型的Go语法表示
+%%  字面上的百分号，并非值的占位符　
+s := new(Sample)
+    s.a = 1
+    s.str = "hello"
+    fmt.Printf("%v\n", *s)　//{1 hello}
+    fmt.Printf("%+v\n", *s) //  {a:1 str:hello}
+    fmt.Printf("%#v\n", *s) // main.Sample{a:1, str:"hello"}
+    fmt.Printf("%T\n", *s)   //  main.Sample
+    fmt.Printf("%%\n", s.a) //  %  %!(EXTRA int=1) 
 
-了解下：
- 空结构体   
 
- rune ~~ int32
 
- golang  testing
+
+
 
