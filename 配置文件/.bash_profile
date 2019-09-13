@@ -2,6 +2,8 @@ source ~/.profile
 #更新脚本
 source ~/projects/baolei/lib/completion.bash
 
+# chmod 600 id_rsa.* #ssh文件的权限要600
+
 ###############goland
 export GO111MODULE=off
 export GOROOT=/usr/local/go
