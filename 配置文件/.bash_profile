@@ -29,8 +29,7 @@ alias order_php_ssh_lyg='ssh land@172.16.164.209'  #ssh land@172.16.164.20
 alias hui-lyg='ssh land@172.16.34.15' #phpgray
 
 #go服务器
-alias go-test='ssh land@114.55.111.198'
-#alias go-test='ssh land@172.16.164.248'
+alias go-test='ssh land@172.16.164.248'
 alias go-stag1='ssh land@172.16.164.179'
 alias go-stag2='ssh land@172.16.164.180'
 alias go-stag3='ssh land@172.16.164.181'
@@ -67,14 +66,13 @@ alias kk='ls -all'
 alias cc='clear'
 alias ls='ls -G'
 alias vimbash_pro='vim ~/.bash_profile'
-alias ppc='php cli.php'
 alias varlog='cd /usr/local/var/log'
 alias mamplog='/Applications/MAMP/logs'
 alias 查的='cd '
-alias prosss='source /etc/profile'
-
-#配置显示当前目录
-PROMPT='%{$fg[cyan]%}$PWD%{$reset_color%} $(git_prompt_info)'
+alias go-src='cd /Users/darren/go/src'
+alias guide='~/projects/guide'
+alias ppp='~/projects'
+ 
 #快速brew源
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
@@ -88,10 +86,8 @@ alias sshengine='ssh root@45.32.42.197'
 #项目使用快捷操作
 alias ppt='php artisan tinker '
 alias ppa='php artisan '
+alias redis-local='redis-server /Users/darren/src/redis-5/redis.conf' #暂用自带配置6379
 
-export PGDATA=~/postgresql/data
-export PATH=/usr/local/pgsql/bin:$PATH
-export PTOOLSPATH=~/src/phalcon-devtools/
 export PATH=/usr/local/openresty/nginx/sbin:$PATH
 export PATH=~/src/kafka2.11-1.1.1/bin:$PATH
 export PATH=$PATH:/usr/local/bin
@@ -100,19 +96,17 @@ export PATH=$PATH:~/src/apache-maven-3.5.4/bin  #maven的路径
 export PATH=$PATH:~/src/apache-tomcat-8.5.34/bin 
 export PATH=$PATH:/usr/local/lib/node_modules/eslint/bin
 export PATH=/usr/bin/php:$PATH
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/mysql/bin
 export PATH=$PATH:~/src/icomet-master
 export PATH=$PATH:/usr/local/nginx/sbin
 export PATH=$PATH:/usr/local/ssdb
-export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/src/redis-5/src
 export DISPLAY=:0
 
 #消息slack配置
 export slack_hooks_key='TC71U9HV3/BC6TA6YM8/v1iTKq0im3xUkFV7xKk9pEEE'
 
+#循环遍历当前目录中脚本文件
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 [ -r "$file" ] && source "$file"
 done
@@ -120,9 +114,6 @@ unset file
 
 
 #终端代理配置 开启后每次打开终端都生效
-#export http_proxy='http://localhost:8118'
-#export https_proxy='http://localhost:8118'
-
 function proxy_off(){
     unset http_proxy
     unset https_proxy
@@ -136,3 +127,19 @@ function proxy_on() {
     echo -e "已开启代理"
 }
 
+
+function sshh(){
+#遍历添加用户登录时添加本地秘钥
+for file in `ls /Users/darren/.ssh/id_rs* |grep -v pub`
+do
+ [ -r "$file" ] && ssh-add "$file"
+done
+unset file
+}
+
+#/Users/darren/.oh-my-zsh/themes/robbyrussell.zsh-theme 这里是直接篡改主题显示的配置 以下任意终端都生效：
+PROMPT='${ret_status}%{$fg[cyan]%}%d$(git_prompt_info)'
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
