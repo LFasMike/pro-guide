@@ -139,6 +139,7 @@ fmt.Fprintf(os.Stderr, "an %s\n", "error")
 字符串替换：
 strings.Replace(strings.Trim(fmt.Sprint(users), "[]"), " ", ",", -1),
 
-
+redis 整型自增
+  bs, err := redis.Int64(redisAuth.Do("INCRBY", keyA))
 
 

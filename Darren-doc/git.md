@@ -32,7 +32,7 @@ git config --global mergetool.keepBackup false
 git branch  -vv
 查看所有分支 和信息
 git branch -va 
-查看远程分支 
+查看远程所有分支 
 git branch -r 
 创建分支
 git branch new   \\ git checkout -b new  等效
@@ -43,6 +43,7 @@ git branch -r -d origin/branch-name
 
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
+或者：git checkout -b new origin/new
 
 git撤销本地所有为更改的提交
 git clean -df
