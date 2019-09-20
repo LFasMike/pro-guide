@@ -29,6 +29,7 @@ alias order_php_ssh_lyg='ssh land@172.16.164.209'  #ssh land@172.16.164.20
 alias hui-lyg='ssh land@172.16.34.15' #phpgray
 
 #go服务器
+alias go-dev='ssh land@172.16.164.220'
 alias go-test='ssh land@172.16.164.248'
 alias go-stag1='ssh land@172.16.164.179'
 alias go-stag2='ssh land@172.16.164.180'
@@ -53,7 +54,6 @@ alias redis_app_test='redis-cli -h 4c6174ac080711e5.m.cnhza.kvstore.aliyuncs.com
 
 
 #自定义快捷命令
-alias ppp_projects='cd ~/projects'
 alias duhd='du -h -d 1'
 alias ppsql='psql -U postgres'
 alias rrm='rm -rf '
@@ -63,7 +63,6 @@ alias tf='tail -f '
 alias lll='ls -lh'
 alias ll='ls -all'
 alias kk='ls -all'
-alias cc='clear'
 alias ls='ls -G'
 alias vimbash_pro='vim ~/.bash_profile'
 alias varlog='cd /usr/local/var/log'
