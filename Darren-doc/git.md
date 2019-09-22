@@ -20,7 +20,7 @@ git -f push 强推版本覆盖远程
 使用到git熟悉命令： 
 git config --global user.name "darren"
 git config --global user.email "darren@iyich.com"
-
+git config --list  查看当前配置情况
 git remote rename origin old-origin
 git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
 git remote -v 查看远程版本库信息
