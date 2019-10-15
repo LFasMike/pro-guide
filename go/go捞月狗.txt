@@ -4,23 +4,23 @@ DATE_FORMAT( `create_time`, '%Y%m%d') < '20190701'  是把2019-08-20 17:40:14 �
 
 DATE_FORMAT(from_unixtime( `create_time` ), '%Y%m%d') < '20190701'")  是把 1566340543转换过去的
 
+deploy发布脚本
+#/bin/sh
+date
+gox -os="linux" -arch="amd64" -output="./game-server_linux_amd64"
+ssh land@172.16.164.248 "rm -f /home/land/beast/bin/game-server_linux_amd64"
+scp game-server_linux_amd64 land@172.16.164.248:~/beast/bin
+ssh land@172.16.164.248 "supervisorctl restart game-server:"
 
-
-supervisorctl配置文件目录：
+supervisorctl 本身的配置
+/home/land/etc/conf.d
+supervisorctl 中项目的配置文件目录：
 /home/land/beast/conf.d
 重启 需要先切到home目录下
 supervisorctl update
 
 单元测试：
 go test api/go_test.go -v -run="TestFirst" 
-
-orders_stream 表中 type:
-// 定义支付类型
-const (
-    ORDER_PAYMENT_TYPE_MASTER     = int64(1) // 订单
-    ORDER_PAYMENT_TYPE_SUPPLEMENT = int64(2) // 补差价
-    ORDER_PAYMENT_TYPE_MULTI      = int64(3) // 多订单
-)
 
 在服务下调用db数据库 ，需要生产sql客户端， 
 一般跨服务调用，建议用RPC内部接口方式调用
@@ -32,7 +32,6 @@ const (
 项目发布 到测试环境
 ./deploy.sh live linux qa
 ./deploy.sh godgame linux qa
-
 staging 环境
 ./deploy.sh live linux stag
 
@@ -64,9 +63,3 @@ go首页查询大神列表 queryGods
 
 写api 服务位置
 /Users/darren/go/src/vendor/laoyuegou.pb/godgame/pb/services.proto
-
-
-//
-brew install protobuf
-
-brew install protoc-gen-go

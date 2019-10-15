@@ -29,3 +29,9 @@ go get github.com/tools/godep
 
 生产文件：
 brew install jq
+
+
+//go rpc所需用的软件：
+brew install protobuf
+
+brew install protoc-gen-go
