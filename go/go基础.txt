@@ -1,3 +1,10 @@
+
+golang判断key是否在map中
+if _, ok := map[key]; ok {
+//存在
+}
+
+
 1) 时间戳转时间字符串 (int64 —>  string)
         timeUnix:=time.Now().Unix()   //已知的时间戳
 

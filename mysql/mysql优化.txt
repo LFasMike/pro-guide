@@ -1,4 +1,4 @@
- innodb_buffer_pool_size默认值是128M，
+feed.sql innodb_buffer_pool_size默认值是128M，
   最小5M(当小于该值时会设置成5M)，最大为LLONG_MAX。
   当innodb_buffer_pool_instances设置大于1的时候，buffer pool size最小为1GB。
   同时buffer pool size需要是innodb_buffer_pool_chunk_size*innodb_buffer_pool_instances的倍数。
