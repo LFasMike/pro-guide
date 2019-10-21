@@ -17,6 +17,15 @@ SELECT column-names
   FROM table-name
  WHERE column-name IN (values) 
 
+
+ 添加索引 多个字段
+ alter table stage_poi add index idx_acc_status(accurate_result,sync_status);
+
+ 数据库创建索引：
+  create index manager_id_on_groups on groups(manager_id);  
+   查看数据库索引
+    SHOW INDEX FROM table_name
+
  强制索引
  ....FROM search FORCE INDEX (search_time) WHERE....
 

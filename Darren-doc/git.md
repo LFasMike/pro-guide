@@ -3,7 +3,6 @@
 git init
 添加远程仓库地址
 
-git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
 git checkout -f
 git reset --soft HEAD^   将在未push提交的撤销  一次
 重置当前分支
@@ -22,7 +21,7 @@ git config --global user.name "darren"
 git config --global user.email "darren@iyich.com"
 git config --list  查看当前配置情况
 git remote rename origin old-origin
-git remote add origin https://code.365yf.cc/zhangzhenyu/test.git
+git remote add github https://darrenzzy:password@github.com/Darrenzzy/deploy.git
 git remote -v 查看远程版本库信息
 
 它会在解决冲突后生成一个原来冲突的备份
