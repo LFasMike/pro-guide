@@ -34,14 +34,6 @@ alias go-stag3='ssh land@172.16.164.181'
 alias go-gameserver='ssh land@121.43.39.155'
 
 #redis地址
-alias redis_go_product_chatroom='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.com -p 6379 -a LOYOGOU2016redis'
-alias redis_order_golang_test='redis-cli -h r-bp1c567a657a6e14.redis.rds.aliyuncs.com -a LOYOGOU2016redis'
-alias redis_order_golang_staging='redis-cli -h r-bp107fc21c97e564.redis.rds.aliyuncs.com -a LOYOGOU2016redis'
-alias redis_go_pro_order='redis-cli -h r-bp1d3973083dd134304.redis.rds.aliyuncs.com -a LOYOGOU2016redis' #大神和订单都在这里
-alias redis_go_pro_play='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.com -a LOYOGOU2016redis' #聊天室和直播
-alias redis_app_prod='redis-cli -h a5c33907a2e04ca3424.redis.rds.aliyuncs.com -a a5c33907a2e04ca3:LOYOGOU2015redis' #app仓库 的user·库
-alias redis_app_test='redis-cli -h 4c6174ac080711e5.m.cnhza.kvstore.aliyuncs.com -a 4c6174ac080711e5:LOYOGOU2015redis '
-alias redis_app_dev='redis-cli -h r-bp1abcbd10071074.redis.rds.aliyuncs.com  -a LOYOGOU2016redis '
 
 
 #自定义快捷命令
