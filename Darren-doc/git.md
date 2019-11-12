@@ -39,6 +39,8 @@ git branch new   \\ git checkout -b new  等效
 branch -D old  
 删除远程分支 先删除本地该分支，在覆盖远程
 git branch -r -d origin/branch-name  
+真正删除远程分支：
+git push origin --delete branchname
 
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
