@@ -37,9 +37,7 @@ supervisorctl status
 重启 任务
 supervisorctl restart brush-prod:
 
-   7.31
-洗大神数据
-   curl https://gateway.lygou.cc/services/v1/game/sync -H "userId:111"
+  
 删除下架品类缓存数据
 PHP order仓库  app/Models/PlayGame.php
 在artisan 中执行 php artisan tinker  =》   PlayGame::resetRedisGames()
