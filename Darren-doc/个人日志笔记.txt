@@ -11,6 +11,8 @@ vim 文本替换命令
 　　:%s/vivian/sky/(等同于 :g/vivian/s//sky/) 替换每一行的第一个 vivian 为 sky
 
 　　:%s/vivian/sky/g(等同于 :g/vivian/s//sky/g) 替换每一行中所有 vivian 为 sky
+vim 替换文本全部替换字符串:  
+:1, $ s/apple/darren/g
 
 
 8.20

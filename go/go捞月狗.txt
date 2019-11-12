@@ -1,3 +1,16 @@
+内网请求 没有定义直接form表单
+gameInfo, err := gamepb.Info(frame.TODO(), nil, frame.Form(map[string]string{
+        "game_id": fmt.Sprint(req.GetGameId()),
+    }))
+
+记录一次编译失败问题：  由于proto里定义了一个接口，可是代码里没有实现该接口，所以编译时候出现问题。
+1 errors occurred:
+--> linux/amd64 error: exit status 2
+Stderr: # plorder
+./main.go:37:33: cannot use s (type *api.PLOrder) as type plorderpb.PLOrderServer in argument to plorderpb.RegisterPLOrderServer:
+    *api.PLOrder does not implement plorderpb.PLOrderServer (missing OrderCoupon method)
+
+
 gorm数据操作
 
 DATE_FORMAT( `create_time`, '%Y%m%d') < '20190701'  是把2019-08-20 17:40:14 转换过去的

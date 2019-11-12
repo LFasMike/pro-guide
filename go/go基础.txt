@@ -1,7 +1,30 @@
+修改字符串：
+func main() {
+    x := "text"
+    xRunes := []rune(x)
+    xRunes[0] = '我'
+    x = string(xRunes)
+    fmt.Println(x)  // 我ext
+}
 
-golang判断key是否在map中
+golang判断key是否在map中.  make(map[int64]int, 0)
 if _, ok := map[key]; ok {
 //存在
+}
+
+redis
+redisConn.Do("SET", key, 1, "EX", 60, "NX")
+
+随机打乱切片数组：
+func Shuffle(slice []gs_gobang.History) []gs_gobang.History {
+    r := rand.New(rand.NewSource(time.Now().Unix()))
+    for len(slice) > 0 {
+        n := len(slice)
+        randIndex := r.Intn(n)
+        slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1]
+        slice = slice[:n-1]
+    }
+    return slice
 }
 
 
@@ -78,6 +101,7 @@ go get +
 
 
 打印格式：
+    icelog.Infof("test 用户道具编号：%v", game.Prop)
 %v  值的默认格式。当打印结构体时，“加号”标记（%+v）会添加字段名
 %#v　相应值的Go语法表示
 %T  相应值的类型的Go语法表示
