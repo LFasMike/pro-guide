@@ -35,7 +35,6 @@ alias go-gameserver='ssh land@121.43.39.155'
 
 #redis地址
 
-
 #自定义快捷命令
 alias ppp='cd ~/projects'
 alias guide='cd ~/projects/guide'
