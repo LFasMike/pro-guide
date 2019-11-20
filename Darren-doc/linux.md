@@ -150,6 +150,9 @@ diff -r dir1 dir2
 复制目录时，使用-r选项即可递归拷贝，如下：
 cp -r dir1 dir2
 
+如果dir2目录已存在，则需要使用
+cp -r dir1/. dir2
+
 linux 查找目录或文件
 查找目录：find /（查找范围） -name '查找关键字' -type d
 查找文件：find /（查找范围） -name 查找关键字 -print
