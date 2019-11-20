@@ -1,3 +1,13 @@
+
+golang字符串：
+strArrayOld:=[]string{"aa","bb"}
+//implode
+strTotal:=strings.Join(strArrayOld,"-")
+ 
+//explode
+strArrayNew:=strings.Split(strTotal,"-")
+6214832177101495
+
 修改字符串：
 func main() {
     x := "text"

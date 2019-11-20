@@ -36,9 +36,7 @@ redis-server /config/redis.conf
 
 ssdb-server -d /config/ssdb.conf
 
-vim 替换文本全部替换字符串:  
-:1, $ s/apple/darren/g
-g/str1/s//str2/g 功能同上
+
 
 使用场景：前段时间交易所项目需要在服务器上用到 根据websocket推送价格数据，在交易所内进行下单撤单处理，但是由于有多个交易对，在服务器上部署时候，略显繁琐。
 （撮合引擎同样有此问题，可以一并解决）
