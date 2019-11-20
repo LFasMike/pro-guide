@@ -241,7 +241,7 @@ func Benchmark_bb(b *testing.B) {
     }
 }
 ```
->  输出：
+>  输出：˛˛˛
 > `200000       135817 ns/op`
 > `50000000         39.3 ns/op`
 
@@ -261,7 +261,7 @@ func Benchmark_bb(b *testing.B) {
 - 分配了新的地址之后，再把原来slice中的元素逐个拷贝到新的slice中并返回
 - 触发realloc时，容量小于1024，会扩展到原来的1倍，如果容量小大于1024，会扩展原来的1/4
 
-33. 很多打印函数打印结构体时回调用该结构体的String方法，所以String不能再打印本身这个对象。如下：
+33. 很多打印函数打印结构体时会调用该结构体的String方法，所以String不能再打印本身这个对象。如下：
 ```go
 type S struct {
 }
@@ -290,7 +290,8 @@ for i:= uint8(10);i>=0;i--{
 
 39. 变量逃逸和函数内联状态分析 `go build -gcflags "-m" -o main.exe main.go `。
 
-40. go汇编指令  `go build  -gcflags "-N -l" -o main.exe main.go && go tool objdump -s "main\.main" main.exe`  关闭内联优化：`go build  -gcflags "-N -l"`。
+40. go汇编指令  `go build  -gcflags "-N -l" -o main.exe main.go && go tool objdump -s "main\.main" main.exe`  
+关闭内联优化：`go build  -gcflags "-N -l"`。
 
 41. 关于defer机制，编译器通过 `runtime.deferproc` “注册” 延迟调用，除目标函数地址外，还会复制相关参数（包括 receiver）。在函数返回前，执行 `runtime.deferreturn` 提取相关信息执行延迟调用。这其中的代价自然不是普通函数调用一条 CALL 指令所能比拟的，单个函数里过多的 defer 调用可尝试合并。最起码，在并发竞争激烈时，`mutex.Unlock `不应该使用 defer，而应尽快执行，仅保护最短的代码片段。
 
