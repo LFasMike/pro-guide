@@ -27,7 +27,23 @@ func Shuffle(slice []gs_gobang.History) []gs_gobang.History {
     return slice
 }
 
+// 日期转字符串
+func FormatDatetime(t time.Time) string {
+    return t.Format(time.RFC3339)
+}
+func FormatDatetimeV2(t time.Time) string {
+    return t.Format("2006-01-02 15:04:05")
+}
 
+// 浮点型精度处理
+func Round(f float64, n int, roundDown bool) float64 {
+    s := math.Pow10(n)
+    if roundDown {
+        return math.Floor(f*s) / s
+    } else {
+        return math.Ceil(f*s) / s
+    }
+}
 1) 时间戳转时间字符串 (int64 —>  string)
         timeUnix:=time.Now().Unix()   //已知的时间戳
 

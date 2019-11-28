@@ -3,7 +3,11 @@
 git init
 添加远程仓库地址
 
+生成ssh秘钥
+ssh-keygen -t rsa -C "your_email@example.com"
+
 git checkout -f
+强制切换分支
 git reset --soft HEAD^   将在未push提交的撤销  一次
 重置当前分支
 git reset --hard origin/master
