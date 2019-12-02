@@ -22,3 +22,22 @@ func logs()  {
 
 }
 
+
+go  倒计时：
+func (dao *Dao) GrabOrderLoop(user int64, exit chan struct{}) {
+    ticker := time.NewTicker(time.Second)
+    defer ticker.Stop()
+    counts := 65
+GL:
+    for {
+        select {
+        case <-ticker.C:
+            if counts < 0 {
+                
+            }
+            counts--
+        case <-exit:
+            break GL
+        }
+    }
+}
