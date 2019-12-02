@@ -35,8 +35,8 @@ git config --global mergetool.keepBackup false
 git branch  -vv
 查看所有分支 和信息
 git branch -va 
-查看远程所有分支 
-git branch -r 
+绑定当前分支到远程分支
+git branch --set-upstream-to=<remote>/<branch> other_bramch
 创建分支
 git branch new   \\ git checkout -b new  等效
 删除本地分支

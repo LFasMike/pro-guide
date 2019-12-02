@@ -1,5 +1,9 @@
     学习笔记
 
+ype *util.XTime
+
+(/Users/darren/go/src/godgame/core/god_coupon.go:8)
+[2019-11-30 13:14:52]  sql: Scan error on column index 4, name "create_time": unsupported Scan, storing driver.Value type int64 into type *util.XTime
 
 
 8.1

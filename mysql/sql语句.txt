@@ -21,6 +21,9 @@ SELECT column-names
  添加索引 多个字段
  alter table stage_poi add index idx_acc_status(accurate_result,sync_status);
 
+删除字段
+alter table play_level_god_accept drop column grab_switch5;
+
  数据库创建索引：
   create index manager_id_on_groups on groups(manager_id);  
    查看数据库索引
