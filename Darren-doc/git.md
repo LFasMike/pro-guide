@@ -33,6 +33,7 @@ git branch  -vv
 git branch -va 
 绑定当前分支到远程分支
 git branch --set-upstream-to=<remote>/<branch> other_bramch
+
 创建分支
 git branch new   \\ git checkout -b new  等效
 删除本地分支
