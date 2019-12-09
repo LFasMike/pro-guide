@@ -1,3 +1,10 @@
+先确保brew安装
+#安装brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#Mac安装依赖（基础安装以免以后还得安装）
+brew install libiconv readline freetype libpng jpeg mhash openssl re2c ImageMagick bison autoconf ffmpeg ImageMagick pcre zlib curl libedit unzip
+
 安装iterm导入配置路径：
 ``` ~/Library/Application Support/iTerm2/DynamicProfiles ```
 
@@ -14,6 +21,9 @@ pip install powerline-status --user
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
+
+安装oh-my-zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 
 安装高亮插件
 cd ~/.oh-my-zsh/custom/plugins/
