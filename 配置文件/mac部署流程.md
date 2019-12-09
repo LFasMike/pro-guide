@@ -52,3 +52,5 @@ source ~/.bash_profile
 最后
 source ~/.zshrc
 
+goland storm 远程配置setting：https://github.com/Darrenzzy/storm-config.git
+
