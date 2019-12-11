@@ -32,3 +32,21 @@ GET /_search
         "filter":   { "range": { "age" : { "gt" : 30 }} }
     }
 }
+
+更新字段
+POST /website/blog/1/_update
+{
+   "doc" : {
+      "tags" : [ "testing" ],
+      "views": 0
+   }
+}
+
+
+        if bs, err := item.Source.MarshalJSON(); err == nil {
+          icelog.Infof("%s", string(bs))
+
+          // json.Unmarshal(bs)
+
+        }
+
