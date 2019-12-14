@@ -40,6 +40,12 @@ vi ~/.zshrc
 找到plugins
 加上zsh-autosuggestion
 
+eq：
+plugins=(
+git
+zsh-autosuggestions
+)
+
 zsh 主题选用 显示路径和git情况
 ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
 
@@ -61,6 +67,4 @@ source ~/.bash_profile
 
 最后
 source ~/.zshrc
-
-goland storm 远程配置setting：https://github.com/Darrenzzy/storm-config.git
 

@@ -4,8 +4,6 @@
 删除索引
 Delete /god_game_qa
 
-
-
 查询一个、多个或者 _all 索引库（indices）和一个、多个或者所有types中查询
 GET /index_2014*/type1,type2/_search
 {
@@ -42,7 +40,6 @@ POST /website/blog/1/_update
    }
 }
 
-
         if bs, err := item.Source.MarshalJSON(); err == nil {
           icelog.Infof("%s", string(bs))
 
@@ -50,3 +47,33 @@ POST /website/blog/1/_update
 
         }
 
+添加字段：
+PUT /test
+{
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "properties" : {
+            "field1" : { "type" : "text" }
+        }
+    }
+}
+
+PUT god_game_qa/_mapping/peiwan_stats
+{
+  "properties": {
+    "location2": {
+      "type": "geo_point"
+    }
+  }
+}
+
+<!-- 修改字段 -->
+POST god_game_stag/_update_by_query
+{
+  "script": {
+    "lang": "painless",
+    "inline": "if (ctx._source.is_show_near == null) {ctx._source.is_show_near= 2}"
+  }
+}
