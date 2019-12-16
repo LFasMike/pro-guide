@@ -1,7 +1,9 @@
+
 cmd收不到排查问题：
 tail -f /mnt/logs/lemon.00.log
 发现 消息都失败了
 于是重启这个lemon服务即可
+每个im消息的情况： tail -f /alidata/logs/warden.00.log
 
 内网请求 没有定义直接form表单
 gameInfo, err := gamepb.Info(frame.TODO(), nil, frame.Form(map[string]string{

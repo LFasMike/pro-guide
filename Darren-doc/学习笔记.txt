@@ -1,5 +1,7 @@
     学习笔记
 
+goland phpstorm 远程配置setting：https://github.com/Darrenzzy/storm-config.git
+
 ype *util.XTime
 
 (/Users/darren/go/src/godgame/core/god_coupon.go:8)
@@ -307,9 +309,6 @@ DevOps 的主要内容是：跟谁共同工作、如何共同工作。它最吸�
 
 
 7.26
-vim 跳到指定行
-ngg11  +回车
-
 php安装好swoole后，需要检查命令：
 php --ri swoole 
 
@@ -324,9 +323,6 @@ echo status | nc 127.0.0.1 2181
 
 强制杀任务
 kill -9 ***
-
-
-
 
 7.21
 

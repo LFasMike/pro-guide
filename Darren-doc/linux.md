@@ -1,4 +1,7 @@
 # linux 常用总结
+12.13
+land@iZ23sbp075eZ:~ $watch -n 1 'sudo netstat -anp|grep 172.16.72.235:6379 |grep ESTA |grep godgame|wc -l'
+
 12.6
 nsq异常断开：
 查看：supervisorctl status |grep nsq
