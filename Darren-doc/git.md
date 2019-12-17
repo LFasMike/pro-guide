@@ -46,6 +46,7 @@ branch -D old
 git branch -r -d origin/branch-name  
 真正删除远程分支：
 git push origin --delete branchname
+git push origin :branchname :branch2
 
 git拉取远程分支到本地分支或者创建本地新分支
 git checkout origin/remoteName -b localName
