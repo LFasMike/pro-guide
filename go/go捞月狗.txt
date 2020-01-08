@@ -50,7 +50,8 @@ go test api/go_test.go -v -run="TestFirst"
 ./beast/bin/plorder_linux_amd64 -v
 
 项目发布 到测试环境
-./deploy.sh live linux qa
+./deploy.sh purse linux ddt_qa >> ~/tmp 2>&1 &
+
 ./deploy.sh godgame linux qa
 staging 环境
 ./deploy.sh live linux stag

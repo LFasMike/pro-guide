@@ -1,5 +1,19 @@
     学习笔记
 
+12.31 php array
+
+<!-- 用于将一个数组  利用外来的arr的数据 更改其中的键值 并返回， -->
+array_walk($list,function (&$a,$key,$arr){
+            $a['state'] = $arr[$a['user_id']]["gouhao"];
+            return $a;
+        },$arr);
+
+<!-- 用户重新生成一个数组是有当前数组callback 生成的 -->
+ array_map(function ($a){
+            return $a['user_id'];
+        },$list);
+
+
 goland phpstorm 远程配置setting：https://github.com/Darrenzzy/storm-config.git
 
 ype *util.XTime

@@ -144,6 +144,12 @@ done
 unset file
 }
 
+#自动导入 vimrc 配置
+function open_vimrc(){
+        echo "先导入vim配置文件"
+        cp /Users/darren/projects/guide/config-files/vimrc.conf ~/.vimrc
+}
+
 #/Users/darren/.oh-my-zsh/themes/robbyrussell.zsh-theme 这里是直接篡改主题显示的配置 以下任意终端都生效：
 PROMPT='$(date "+%H:%M:%S")${ret_status}%{$fg[cyan]%}%d$(git_prompt_info) '
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
