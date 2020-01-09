@@ -75,5 +75,11 @@ POST god_game_stag/_update_by_query
   "script": {
     "lang": "painless",
     "inline": "if (ctx._source.is_show_near == null) {ctx._source.is_show_near= 2}"
+  },
+  "query": {
+    "term": {
+      "god_id": 1992252
+    }
   }
 }
+
