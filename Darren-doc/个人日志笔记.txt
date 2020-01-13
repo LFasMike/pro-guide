@@ -1,3 +1,11 @@
+
+1.14
+交易所启动监听脚本
+nohup go run /Users/darren/go/src/Futures-Go-demo/main/main.go >>test.log 2>&1 &
+
+mac 执行文件 编译转成linux 可执行文件 
+gox -os="linux" -arch="amd64" -output="./game-server_linux_amd64"
+
 12.24
 redis统计大key
 redis-cli  -h 127.0.0.1  -i 0.1  --bigkeys
