@@ -1,3 +1,8 @@
+
+2.17
+指定配置文件更新composer 命令：
+COMPOSER=composer-name.json composer install
+
 1.16
 将现在正在执行的linux命令放在后台执行
 1.  通过命令： ctrl + z 来将当前的命令暂停。

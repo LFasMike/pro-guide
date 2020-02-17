@@ -4,7 +4,7 @@ git init
 添加远程仓库地址
 
 生成ssh秘钥
-ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -C "your_email@example.com" -f ~/....
 
 git checkout -f
 强制切换分支
@@ -66,6 +66,7 @@ git log --stat --abbrev-commit
  git pull origin dev:Darren
  拉取最新，并归到当前提交的后面
  git pull --rebase 
+ git pull --rebase origin master
 
 从远程获取最新版本到本地
 git fetch origin aaa
