@@ -1,3 +1,11 @@
+1.6
+开启 goland  phpstorm 注册认证
+在这个目录下加入文件
+重启GoLand之后，点击菜单栏中的 “Help” -> “Register …”
+加入这一行： -javaagent:/Users/darren/jetbrains-agent.jar
+点击激活即可
+
+
 
 2.17
 指定配置文件更新composer 命令：
