@@ -1,1 +1,52 @@
 95333:C 14 Jan 16:49:10.253 # Can't chdir to '~/redis/': No such file or directory
+26539:C 21 Feb 2020 19:18:34.838 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+26539:C 21 Feb 2020 19:18:34.839 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=26539, just started
+26539:C 21 Feb 2020 19:18:34.839 # Configuration loaded
+26540:M 21 Feb 2020 19:18:34.858 # You requested maxclients of 500000 requiring at least 500032 max file descriptors.
+26540:M 21 Feb 2020 19:18:34.858 # Server can't set maximum open files to 500032 because of OS error: Invalid argument.
+26540:M 21 Feb 2020 19:18:34.858 # Current maximum open files is 24576. maxclients has been reduced to 24544 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+26540:M 21 Feb 2020 19:18:34.864 * Running mode=standalone, port=6379.
+26540:M 21 Feb 2020 19:18:34.864 # Server initialized
+26540:M 21 Feb 2020 19:18:34.865 * DB loaded from disk: 0.001 seconds
+26540:M 21 Feb 2020 19:18:34.865 * Ready to accept connections
+28264:C 22 Feb 2020 14:23:30.394 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+28264:C 22 Feb 2020 14:23:30.395 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=28264, just started
+28264:C 22 Feb 2020 14:23:30.395 # Configuration loaded
+28265:M 22 Feb 2020 14:23:30.415 # You requested maxclients of 500000 requiring at least 500032 max file descriptors.
+28265:M 22 Feb 2020 14:23:30.416 # Server can't set maximum open files to 500032 because of OS error: Invalid argument.
+28265:M 22 Feb 2020 14:23:30.416 # Current maximum open files is 24576. maxclients has been reduced to 24544 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+28265:M 22 Feb 2020 14:23:30.417 # Could not create server TCP listening socket 0.0.0.0:6379: bind: Address already in use
+29258:C 22 Feb 2020 15:58:44.841 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29258:C 22 Feb 2020 15:58:44.841 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=29258, just started
+29258:C 22 Feb 2020 15:58:44.842 # Configuration loaded
+29259:M 22 Feb 2020 15:58:44.863 # You requested maxclients of 500000 requiring at least 500032 max file descriptors.
+29259:M 22 Feb 2020 15:58:44.863 # Server can't set maximum open files to 500032 because of OS error: Invalid argument.
+29259:M 22 Feb 2020 15:58:44.863 # Current maximum open files is 24576. maxclients has been reduced to 24544 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+29259:M 22 Feb 2020 15:58:44.870 * Running mode=standalone, port=6379.
+29259:M 22 Feb 2020 15:58:44.870 # Server initialized
+29259:M 22 Feb 2020 15:58:44.871 * DB loaded from disk: 0.000 seconds
+29259:M 22 Feb 2020 15:58:44.871 * Ready to accept connections
+29259:signal-handler (1582383455) Received SIGTERM scheduling shutdown...
+29259:M 22 Feb 2020 22:57:35.215 # User requested shutdown...
+29259:M 22 Feb 2020 22:57:35.216 * Removing the pid file.
+29259:M 22 Feb 2020 22:57:35.216 # Redis is now ready to exit, bye bye...
+32765:C 22 Feb 2020 23:14:56.270 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+32765:C 22 Feb 2020 23:14:56.271 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=32765, just started
+32765:C 22 Feb 2020 23:14:56.271 # Configuration loaded
+32766:M 22 Feb 2020 23:14:56.293 # You requested maxclients of 500000 requiring at least 500032 max file descriptors.
+32766:M 22 Feb 2020 23:14:56.293 # Server can't set maximum open files to 500032 because of OS error: Invalid argument.
+32766:M 22 Feb 2020 23:14:56.293 # Current maximum open files is 24576. maxclients has been reduced to 24544 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+32766:M 22 Feb 2020 23:14:56.297 * Running mode=standalone, port=6379.
+32766:M 22 Feb 2020 23:14:56.299 # Server initialized
+32766:M 22 Feb 2020 23:14:56.305 * DB loaded from disk: 0.001 seconds
+32766:M 22 Feb 2020 23:14:56.305 * Ready to accept connections
+9782:C 27 Feb 2020 09:53:27.158 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+9782:C 27 Feb 2020 09:53:27.159 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=9782, just started
+9782:C 27 Feb 2020 09:53:27.160 # Configuration loaded
+9783:M 27 Feb 2020 09:53:27.176 # You requested maxclients of 500000 requiring at least 500032 max file descriptors.
+9783:M 27 Feb 2020 09:53:27.176 # Server can't set maximum open files to 500032 because of OS error: Invalid argument.
+9783:M 27 Feb 2020 09:53:27.177 # Current maximum open files is 24576. maxclients has been reduced to 24544 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+9783:M 27 Feb 2020 09:53:27.183 * Running mode=standalone, port=6379.
+9783:M 27 Feb 2020 09:53:27.184 # Server initialized
+9783:M 27 Feb 2020 09:53:27.184 * DB loaded from disk: 0.000 seconds
+9783:M 27 Feb 2020 09:53:27.184 * Ready to accept connections
