@@ -28,6 +28,9 @@ docker inspect 7c69db6bd880
 拷贝容器内容
 docker cp id:/tmp...  ./
 
+提交镜像：
+docker commit -a='who' -m='what' id name:1.1
+
 
 
 
