@@ -1,6 +1,37 @@
-9.26学习docker
+学习docker
+2月23号继续学习：
+
+列出当前进行的容器
+docker ps -l 
+
+启动之前建立的容器
+docker start  ‘id’
+
+容器挂起
+control +p +q 
+从新在进入原来的容器
+docker attach id
+不进入原来的容器的，隔山打牛，直接返回容器输出内容
+docker exec -it id  ls -l ~
+
+正常关闭容器
+docker stop id 
+强制关闭
+docker kill id
+ 
+查看docker日志
+docker logs -f -t --tail 3 7c69db6bd880
+
+查看容器内部细节
+docker inspect 7c69db6bd880
+
+拷贝容器内容
+docker cp id:/tmp...  ./
 
 
+
+
+9.26
 1 查看docker镜像（images）后可以导出导入镜像以供下次使用
 
 docker save  contos：7 > /usr/local....
@@ -26,7 +57,12 @@ Public key: EOS7JLqVDbfAw2nXGj7w5vrKz3LjMEZzhKnEkaG5PMqFmi6tXN2Hm
 Private key: 5J7UPHH365YVbxDvdskvy8RQHJuhtAuEWvYdNhoHrnr4wAkTt8X
 Public key: EOS6r98RvvTRuU2Q1grnoQ52kZaPfD1c9hoRXsfu4LiofEts6zYci
 
-docker run -d -p 80:80 --name webserver nginx
+
+以当前的8080端口对应docker的80端口
+docker run -d -p 8080:80 --name webserver nginx
+如果参数是-P 大写 表示 本机随机分配端口到docker的80端口
+
+
 $ docker stop webserver
 $ docker rm webserver
 
@@ -38,6 +74,9 @@ $ docker rm webserver
 docker rm $(docker ps -aq)
 
 docker image ls
+
+查看当前机器已安装的镜像：
+docker image
 
 
 java环境运行 

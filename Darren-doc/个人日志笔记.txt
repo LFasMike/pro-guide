@@ -1,3 +1,7 @@
+2.20
+ goland phpstorm远程配置库：
+https://github.com/Darrenzzy/storm-config.git
+
 1.6
 开启 goland  phpstorm 注册认证
 在这个目录下加入文件
