@@ -20,6 +20,8 @@ git push -u origin master
 git push <远程主机名> <本地分支名>:<远程分支名>
 git push  -f 强推版本覆盖远程
 
+git commit --amend 更新上次提交的massage文案
+
 使用到git熟悉命令： 
 git config --global user.name "darren"
 git config --global user.email "darren@iyich.com"
