@@ -1,4 +1,10 @@
 # linux 常用总结
+3.1
+命令:ls -lrt
+-l     use a long listing format  以长列表方式显示（详细信息方式）
+-t     sort by modification time 按修改时间排序（最新的在最前面）
+-r     reverse order while sorting （反序）
+
 12.13
 land@iZ23sbp075eZ:~ $watch -n 1 'sudo netstat -anp|grep 172.16.72.235:6379 |grep ESTA |grep godgame|wc -l'
 
