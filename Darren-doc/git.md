@@ -29,6 +29,8 @@ git config --list  查看当前配置情况
 git remote rename origin old-origin
 git remote add github https://darrenzzy:password@github.com/Darrenzzy/deploy.git
 git remote -v 查看远程版本库信息
+git remote rm origin 删除远程库
+
 
 拉取远程分支到本地分支 
  git pull origin dev:Darren
@@ -50,6 +52,7 @@ git branch  -vv
 git branch -va 
 绑定当前分支到远程分支
 git branch --set-upstream-to=<remote>/<branch> other_bramch
+
 
 创建分支
 git branch new   \\ git checkout -b new  等效
