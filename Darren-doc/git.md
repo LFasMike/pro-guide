@@ -18,7 +18,9 @@ git clean -df
 则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push
 git push -u origin master
 git push <远程主机名> <本地分支名>:<远程分支名>
-git -f push 强推版本覆盖远程
+git push  -f 强推版本覆盖远程
+
+git commit --amend 更新上次提交的massage文案
 
 使用到git熟悉命令： 
 git config --global user.name "darren"
@@ -27,6 +29,19 @@ git config --list  查看当前配置情况
 git remote rename origin old-origin
 git remote add github https://darrenzzy:password@github.com/Darrenzzy/deploy.git
 git remote -v 查看远程版本库信息
+git remote rm origin 删除远程库
+
+
+拉取远程分支到本地分支 
+ git pull origin dev:Darren
+ 拉取最新，并归到当前提交的后面
+ git pull --rebase 
+ git pull --rebase origin master
+
+从远程获取最新版本到本地 （很重要一步~~）
+git fetch origin aaa
+具体到拉某一个分支
+git fetch origin branch1:branch2
 
 它会在解决冲突后生成一个原来冲突的备份
 git config --global mergetool.keepBackup false
@@ -37,6 +52,7 @@ git branch  -vv
 git branch -va 
 绑定当前分支到远程分支
 git branch --set-upstream-to=<remote>/<branch> other_bramch
+
 
 创建分支
 git branch new   \\ git checkout -b new  等效
@@ -62,14 +78,6 @@ git log --pretty=oneline
 查看每一次提交的详细内容
 git log --stat --abbrev-commit
 
-拉取远程分支到本地分支
- git pull origin dev:Darren
- 拉取最新，并归到当前提交的后面
- git pull --rebase 
- git pull --rebase origin master
-
-从远程获取最新版本到本地
-git fetch origin aaa
 比较远程分支和本地分支
  git log -p aaa origin/aaa
 合并远程分支到本地
