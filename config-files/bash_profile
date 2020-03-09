@@ -3,7 +3,7 @@ source ~/.profile
 source /Users/darren/projects/neutron/lib/completion.bash
 
 ###############goland
-export GO111MODULE=on
+#export GO111MODULE=on
 export GOROOT=/usr/local/go
 export GOPATH=/Users/darren/go
 export PATH=$PATH:/Users/darren/go/src/github.com/beego/bee/
@@ -32,29 +32,39 @@ alias 查的='cd '
 
 #捞月狗项目
 alias baolei='/Users/darren/projects/neutron '
-alias lyg_ceshi='ssh land@118.178.128.61'
-alias lyg_order_prod_huidu='ssh land@172.16.165.35' #./jumpto lyg_php_service_04
+
+alias lyg_order_prod_huidu='ssh land@172.16.165.35' #./jumpto lyg_php_service_04 phpgray
 
 alias tasklyg='ssh land@172.16.163.251'
 alias log_lyg='./jumpto vpcplayground_01'
 alias order_php_ssh_lyg='./jumpto  vpcplayground_10'
 alias play_admin_lyg_ssh='ssh land@172.16.163.255'  #./jumpto peiwan_om_test
 alias lygapp='/Users/darren/projects/lyg_app'
-alias hui-lyg='ssh land@172.16.34.15' #phpgray
+
+alias lyg_order_prod='ssh land@172.16.34.15' #./jumpto lyg_php_gray
+alias activity_lyg_test='ssh land@172.16.164.39' # ./jumpto lyg-activity-test
+alias hui-proxy='ssh land@172.16.164.40 ' #./jumpto zentao-pms-p-01
+alias log_lyg='ssh land@172.16.163.58' #'./jumpto vpcplayground_01' oxpp后台
+alias order_php_ssh_lyg='ssh land@172.16.164.209' # './jumpto  vpcplayground_10'
+alias play_admin_lyg_ssh='ssh land@172.16.163.255'  #./jumpto peiwan_om_test
+alias windfall-web='php -S 127.0.0.1:9988 -t /Users/darren/projects/windfall_php/public >> /usr/local/var/log/php7.log 2>&1 &'
+alias order-web='php -S 127.0.0.1:9988 -t /Users/darren/projects/order_php/public >> /usr/local/var/log/php7.log 2>&1 &'
+alias god-web='php -S 127.0.0.1:9998 -t /Users/darren/projects/god_php/public >> /usr/local/var/log/php7.log 2>&1 &'
+
+
 
 #go服务器
+alias gotest='/Users/darren/go/src/testgo'
+
 alias go-test='ssh land@114.55.111.198'
 alias go-stag1='ssh land@172.16.164.179'
-alias go-stag2='ssh land@172.16.164.180'
-alias go-stag3='ssh land@172.16.164.181'
-alias go-vender='/Users/darren/go/src/vendor/laoyuegou.pb'
 alias gosrc='cd /Users/darren/go/src'
-
-
 alias order-start='php -S 127.0.0.1:9988 -t /Users/darren/projects/order_php/public >> /usr/local/var/log/php7.log 2>&1 &'
 alias god-start='php -S 127.0.0.1:9998 -t /Users/darren/projects/god_php/public >> /usr/local/var/log/php7.log 2>&1 &'
 
 
+
+#redis地址
 alias redis_go_test='redis-cli -h r-bp1c567a657a6e14.redis.rds.aliyuncs.com -a LOYOGOU2016redis'
 alias redis_app_prod='redis-cli -h a5c33907a2e04ca3424.redis.rds.aliyuncs.com -a a5c33907a2e04ca3:LOYOGOU2015redis' #app仓库 的user·库
 alias redis_go_pro_play='redis-cli -h r-bp186cf3f5f82ae4826.redis.rds.aliyuncs.com -a LOYOGOU2016redis' #聊天室和直播
@@ -103,9 +113,11 @@ redis-server /Users/darren/projects/guide/config-files/redis.conf
 
 #终端代理配置 开启后每次打开终端都生效
 function proxy_off(){
-    unset http_proxy
-    unset https_proxy
-    echo -e "已关闭代理"
+        unset http_proxy;
+        unset https_proxy;
+        unset HTTPS_PROXY;
+        unset HTTP_PROXY;
+        echo -e "已关闭代理";
 }
 
 function proxy_on() {
@@ -124,6 +136,15 @@ do
  [ -r "$file" ] && ssh-add "$file"
 done
 unset file
+}
+
+
+#自动导入 vimrc 配置
+function open_vimrc(){
+        echo "先导入vim配置文件";
+        cp /Users/darren/projects/guide/config-files/vimrc.conf ~/.vimrc;
+        source ~/.vimrc;
+
 }
 
 #/Users/darren/.oh-my-zsh/themes/robbyrussell.zsh-theme 这里是直接篡改主题显示的配置 以下任意终端都生效：
