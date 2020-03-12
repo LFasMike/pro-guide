@@ -1,23 +1,23 @@
 #!/bin/bash
 yum install  -y readline-devel libevent-devel iotop zlib-devel iptraf libmcrypt libmcrypt-devel mcrypt mhash openssl-devel curl-devel bison autoconf libxml2-devel libedit-devel ImageMagick re2c pcre-devel  pcre-devel
 
-wget http://git.365yf.com/linux_config/postgresql-9.6.0.tar.gz
-wget http://git.365yf.com/linux_config/nginx-1.8.0.tar.gz
-wget http://git.365yf.com/linux_config/php-5.6.28.tar.gz
-wget http://git.365yf.com/linux_config/phpredis.tar.gz
-wget http://git.365yf.com/linux_config/phpssdb.tar.gz
-wget http://git.365yf.com/linux_config/phalcon-v2.0.13.tar.gz
-wget http://git.365yf.com/linux_config/composer_installer 
-wget http://git.365yf.com/linux_config/redis-3.2.4.tar.gz
-wget http://git.365yf.com/linux_config/ssdb.zip
-wget http://git.365yf.com/linux_config/es2.4.1.tar.gz
-wget http://git.365yf.com/linux_config/icomet.zip
-wget http://git.365yf.com/linux_config/jdk-8u111-linux-x64.tar.gz
-wget http://git.365yf.com/linux_config/nginx.conf
-wget http://git.365yf.com/linux_config/php-fpm.conf
-wget http://git.365yf.com/linux_config/php.ini
-wget http://git.365yf.com/linux_config/fpm
-wget http://git.365yf.com/linux_config/nginx.conf
+wget http://私有的仓库/postgresql-9.6.0.tar.gz
+wget http://私有的仓库/nginx-1.8.0.tar.gz
+wget http://私有的仓库/php-5.6.28.tar.gz
+wget http://私有的仓库/phpredis.tar.gz
+wget http://私有的仓库/phpssdb.tar.gz
+wget http://私有的仓库/phalcon-v2.0.13.tar.gz
+wget http://私有的仓库/composer_installer 
+wget http://私有的仓库/redis-3.2.4.tar.gz
+wget http://私有的仓库/ssdb.zip
+wget http://私有的仓库/es2.4.1.tar.gz
+wget http://私有的仓库/icomet.zip
+wget http://私有的仓库/jdk-8u111-linux-x64.tar.gz
+wget http://私有的仓库/nginx.conf
+wget http://私有的仓库/php-fpm.conf
+wget http://私有的仓库/php.ini
+wget http://私有的仓库/fpm
+wget http://私有的仓库/nginx.conf
 
 
 tar -zxvf postgresql-9.6.0.tar.gz
