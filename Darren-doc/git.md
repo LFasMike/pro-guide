@@ -74,7 +74,9 @@ git clean -df
 仅显示最近的两次更新
 git log -p -2
 查看历史提交日志 
-git log --pretty=oneline
+git log --pretty=oneline 
+或者： git log -p app/Http/Controllers/Admin/AdminController.php
+
 查看每一次提交的详细内容
 git log --stat --abbrev-commit
 
