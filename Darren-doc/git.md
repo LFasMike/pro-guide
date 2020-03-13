@@ -19,6 +19,7 @@ git clean -df
 git push -u origin master
 git push <远程主机名> <本地分支名>:<远程分支名>
 git push  -f 强推版本覆盖远程
+git push origin tag  标签推送到远程
 
 git commit --amend 更新上次提交的massage文案
 
