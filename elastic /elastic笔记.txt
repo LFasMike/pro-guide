@@ -10,10 +10,13 @@ GET /index_2014*/type1,type2/_search
     "query": { }
 }
 
-
-分页
-GET /_search
-{
+分页 查询
+POST god_game_qa/_search{
+  "query" : {
+    "bool" : {
+    ....
+    }
+  },
   "from": 30,
   "size": 10
 }

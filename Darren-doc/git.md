@@ -6,9 +6,13 @@ git init
 生成ssh秘钥
 ssh-keygen -t rsa -C "your_email@example.com" -f ~/....
 
-git checkout -f
+
+拉取指定分支
+git clone -b name http://......
 强制切换分支
-git reset --soft HEAD^   将在未push提交的撤销  一次
+git checkout -f
+将在未push提交的撤销  一次
+git reset --soft HEAD^   
 重置当前分支
 git reset --hard origin/master
 当前分支回退版本(回退3个版本 就用HEAD~3 )
