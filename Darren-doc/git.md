@@ -36,6 +36,10 @@ git remote add github https://darrenzzy:password@github.com/Darrenzzy/deploy.git
 git remote -v 查看远程版本库信息
 git remote rm origin 删除远程库
 
+git tag -a 0.0.1 -m 'something....' 打标签
+上传标签
+git push origin 0.0.1  
+或者上传全部标签:git push origin --tags 
 
 拉取远程分支到本地分支 
  git pull origin dev:Darren
